@@ -1,0 +1,154 @@
+@import url(../static/css/index.css);
+
+.front main{
+    flex-direction: column;
+    padding: 50px 0;
+    gap: 24px;
+    height: auto;
+    background-size: 116% 100%;
+}
+.front main img {
+    border: solid 4px #003732;
+    border-radius: 10px;
+}
+.front main .projects {
+    width: 81%;
+    align-items: center;
+    display: grid;
+    gap:10px;
+    grid-template-columns: 50% 1fr;
+}
+.front main .projects span a{
+    padding-top: 191px;
+}
+.front .projects span a{
+    position: relative;
+}
+.front .projects span a:hover::before , .front .projects span a:hover::after{
+    content: "medical app more details";
+    background-image: linear-gradient(transparent, 57px, rgb(105 146 142), 153px, #b69292);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), 151px, #ffa1a1);
+    padding: 20% 10% 0%;
+    width: 80%;
+    height: 58%;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 2;
+    text-align: center;
+    font-size: 22px;
+    color: white;
+    border-radius: 10px;
+}
+.about {
+    padding: 0;
+    margin: 0;
+}
+.front .proj2  span a:hover::before{
+    content: "Blog Project more details";
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), 151px, #caa1ff);
+}
+.front .projects:nth-child(3) span a:hover::before{
+    content: "animation Project more details";
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), 151px, #4c8dce);
+}
+.front .proj4 span a:hover::before{
+    content: "landing Project more details";
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), 151px, #4c8dce);
+}
+.front .proj5 span a:hover::before{
+    content: "Weather Project more details";
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), 151px, #4c8dce);
+}
+.front .proj6 span a:hover::before{
+    content: "java Project more details";
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), 151px, #4c8dce);
+}
+.front .proj7 span a:hover::before{
+    content: "data Structure Project more details";
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), 151px, #4cce91);
+}
+.front .projects span a:hover::after{
+    content: "";
+    background-image: url(../static/photo/external-link.png);
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    z-index: 2;
+    transition-delay: 2s;
+    background-size: 100%;
+    padding: 0px;
+}
+
+#fronth {
+    margin-bottom: 84px;
+    height: 5px;
+}
+#frontjs ,#frontnjs{
+margin: 15px 0 84px;
+height: 5px;
+}
+#frontj{
+    margin: 15px 0 84px;
+    height: 5px;
+}
+
+@media (max-width: 1200px) {
+    header #navbar__list {
+        gap: 33px;
+        width: 100%;
+    }
+    
+}
+@media (max-width: 1000px) {
+    .front main .projects {
+    grid-template-columns: 41% 1fr;
+    }
+    .front .projects span a:hover::before{
+    height: 63%;
+    }
+   .front main img {
+    width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+  .front .projects span a:hover::before {
+        height: 66%;
+    }
+}
+@media (max-width: 700px) {
+    .front .projects span a:hover::before {
+        height: 68%;
+    }
+    .front main .projects {
+        grid-template-columns: 1fr;
+    }
+    header #navbar__list .off {
+        display: block;
+    }
+    
+}
+@media (max-width: 520px) {
+    .front .projects span a:hover::before {
+        height: 72%;
+    }
+.front {
+        display: block;
+    }
+    .front {
+    margin: 80px -8% 94px 19%;
+}}
+
+@media (max-width: 420px) {
+    .front .projects span a:hover::before {
+        height: 82%;
+    }
+    header #navbar__list {
+        gap: 33px;
+        width: 142%;
+        margin: 17px 18px 5px -126px;
+    }
+}

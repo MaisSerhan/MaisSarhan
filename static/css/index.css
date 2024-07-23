@@ -1,0 +1,558 @@
+header{
+    position: fixed;
+    z-index: 500;
+    top: 5px;
+    width: 100%;
+    background-color: white;
+}    
+header #top-header{
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 140px 0.6fr;
+    align-items: center;
+    text-align: center;
+    font-size: 1.6em;
+}
+header #navbar__list{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+}
+header #navbar__list .off{
+    display: none;
+}
+header #navbar__list li a{
+    position: relative;
+    text-decoration: none;
+    color: black;
+    border-color: transparent;
+    transition-duration: 0.3s;
+}
+
+header #navbar__list li a:hover , .about button:hover{
+    border: transparent solid 3px;
+    border-bottom-color: #0c6e65;
+    color: rgb(146, 116, 70);
+    color:#0c6e65;
+}
+header .menu__link#minue{
+    display: none;
+}
+.greenColor{
+    color: #0c6e65;
+}
+/*front*/
+.front{
+    margin: 108px 5% 94px 2%;
+    display: flex;
+    gap: 53px;
+    align-items: baseline;
+}
+/*main*/
+.about main,.front main{
+    padding-bottom: 48px;
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20210324/pngtree-abstract-memphis-playful-portfolio-pink-image_593418.jpg);
+    background-size: 100% 100%;
+    height: 530px;
+    width: 100%;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.front main .file{
+    font-size: 20px;
+}
+.front main .name {
+    font-size: 45px;
+    text-transform: capitalize;
+}
+.front main .name i{
+    color: #0c6e65;
+}
+.front main img.img1{
+    margin: 0 14% 0 0;
+    border-radius: 100px;
+    box-shadow: #b69292 0px 0px 15px 7px;
+}
+.connect img{
+    width: 30px;
+    border-radius: 40%;
+    margin: 9px 0
+}
+
+
+/*about*/
+.about{
+    padding-top: 120px;
+    margin: 15px 5% 128px 2%;
+    display: flex;
+    gap: 78px;
+    align-items: baseline;
+}
+/*main*/
+.about main {
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20210324/pngtree-pink-playful-abstract-portfolio-memphis-image_593407.jpg);
+    height: 618px;
+    gap: 51px;
+    padding: 15px 47px;
+}
+
+.about aside .up{
+    position: fixed;
+    border: black solid 2px;
+    background-color: white;
+    padding: 5px 9px;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+    bottom: 5%;
+    text-decoration: none;
+    color: black;
+}
+.about__contennt{
+height: 100%;
+}
+.about h1{
+    font-size: 40px;
+}
+.list {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr;
+}
+.about button {
+    cursor: pointer;
+    display: inline-block;
+    background-color: transparent;
+    font-size: 25px;
+    font-weight: bold;
+    border-color: transparent;
+    transition-duration: .5s;
+}
+#tow ,#three{
+    display: none;
+}
+#tow p,#three p,#one p{
+    text-transform:capitalize;
+}
+.about__contennt .shorts{
+    margin-top: 58px;
+}
+.about video{
+    margin: 10%;
+    border-radius: 5px;
+    box-shadow: #b69292 20px 14px 15px 7px;
+}
+
+/*service*/
+.services,.project{
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20210324/pngtree-playful-pink-memphis-abstract-portfolio-image_593408.jpg);
+    background-size: 100% 100%;
+    display: grid;
+    grid-template-rows: 123px 1fr 110px;
+    align-items: center;
+    height: 630px;
+    margin: 5px 5% 75px 113px;
+    border-radius: 30px;
+    gap: 22px;
+}
+.services main{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 200px 196px;
+    align-items: start;
+    padding: 0px;
+    gap: 49px;
+}
+.services div a ,.project div a{
+    position: relative;
+    text-decoration: none;
+    color: black;
+}
+.services div a:hover::before , .services div a:hover::after{
+    content: "I can create integrated projects using front-end technologies. To see examples, click";
+    background-image: linear-gradient( white ,30%,#b69292);
+    padding: 10%;
+    width: 82%;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    top: -10px;
+    z-index: 2;
+    text-align: center;
+    transition-delay:2s ;
+    font-size: 22px;
+    box-shadow: #b69292 0px 0px 15px 7px;
+}
+.services div:nth-child(2) a:hover::before , .services div a:hover::after{
+    content: "I used the Java language and some structures to create pages and solve some problems. Click";
+}
+.services div:nth-child(3) a:hover::before , .services div a:hover::after{
+    content: "Some modern and traditional designs can be made with a touch of artistic creativity. This can be seen through the projects that I present. Click";
+}
+.services div:nth-child(3) a:hover::after{
+    top:80%;
+}
+.services div a:hover::after{
+    content: "";
+    background-image: url(../photo/external-link.png);
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    z-index: 2;
+    transition-delay: 2s;
+    background-size: 100%;
+    padding: 0px;
+}
+.services div a img {
+    width: 50px;
+    height: 46px;
+    padding: 0 5px;
+}
+
+/*project*/
+.project main {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    align-items: center;
+    padding: 0px;
+    gap: 6%;
+}
+#services,#project ,#resume{
+    margin: 106px;
+    height: 5px;
+}
+.project{
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20210324/pngtree-portfolio-memphis-playful-abstract-pink-image_593412.jpg);
+}   
+.project h1 , .services h1{
+    margin: -50px 10% -68px 18%;
+    font-size: 45px;
+    width: 72%;
+}
+.project main div a , .services main div a{
+    font-size: 32px;
+    display: inline-block;
+    height: 151px;
+    padding-top: 48px;
+    padding-left: 14%;
+    cursor: pointer;
+    width: 75%;
+    background-color: #e6a9a9;
+}
+
+.project main div a:hover{
+    background-color: #f4d1d1;
+    box-shadow: #b69292 0px 0px 15px 7px;
+
+}
+.project main div{    
+    width: 100%;
+}
+
+/*resume*/
+.resume main{
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20210324/pngtree-abstract-pink-memphis-playful-portfolio-image_593421.jpg);
+    background-size: 100% 100%;
+    background-position: 151% 50%;
+    display: flex;
+    height: 421px;
+    margin: 5px 5% 145px 113px;
+    border-radius: 30px;
+    gap: 9%;
+    justify-content: flex-start;
+    align-items: center;
+}
+.resume main img{
+    border-radius: 99px;
+    margin: 0 16%;
+}
+
+footer{
+    display: flex;
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20210324/pngtree-portfolio-playful-abstract-pink-memphis-image_593409.jpg);
+    background-size: 100% 390%;
+    height: 171px;
+    margin-top: 40px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer h1 {
+    font-size: 25px;
+}
+footer img{
+    border-radius: 50px;
+    box-shadow: #b69292 0px 0px 15px 7px;
+
+
+}
+
+@media (max-width:1700px){
+.services main div a:hover::before{
+height: 60%;
+}
+.services main div a:hover::after{ 
+top: 70%;
+}
+}
+@media (max-width:1200px){
+    
+    header #navbar__list {
+        gap: 33px;
+    }
+    .about main {
+        gap:0px;
+    }
+}
+
+@media (max-width:1200px){
+    .services main div a:hover::before{
+        height: 65%;
+        } 
+}
+@media (max-width:1130px){
+    .services main div a:hover::before{
+        height: 70%;
+        } 
+    .about main {
+        padding: 15px 0px;
+    }
+}
+@media (max-width:1020px){
+    .about video {
+        margin: 8%;
+    }
+}
+@media (max-width:990px){
+    .services main div a:hover::before {
+        height: 79%;
+    }
+    .about video {
+        margin: 7%;
+    }
+    .services main div:nth-child(3) a:hover::before {
+        font-size: 19px;
+    }
+}
+@media (max-width:970px){
+    .about video {
+        margin: 8%;
+        width: 39%;
+        height: 48%;
+    }
+}
+
+@media (max-width:900px){
+    .about video {
+        margin: 7%;
+        width: 39%;
+        height: 48%;
+    }
+}
+
+@media (max-width:800px){
+    .services main div a:hover::after{ 
+        top: 75%;
+        }
+    .front {
+        gap: 4%;
+    }
+    .about main {
+        background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20210324/pngtree-abstract-memphis-playful-portfolio-pink-image_593418.jpg);
+        background-size: 109% 100%;
+        display: grid;
+        grid-template-rows: auto 1fr;
+        height:900px;
+        justify-items: center;
+        padding: 20px;
+    }
+    .front main {
+        padding: 0 33px;
+     }
+  .about video {
+    width: 172px;
+    height: 297px;
+    }
+    .resume main img {
+        margin: 0 11%;
+    }
+    .about__contennt {
+        background-color: #ffc3c3;
+        padding: 0 12px;
+    }
+}  
+@media (max-width:750px){
+    .services main div a:hover::before {
+        height: 86%;
+        font-size: 19px;
+    }
+    header #navbar__list {
+        gap: 19px;
+    }
+    .about main, .front main {
+        padding-left: 26px;
+    }
+}
+
+
+@media (max-width:700px){
+    
+    header #navbar__list {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        flex-direction: column;
+        align-items: stretch;
+        margin: 17px 45px 5px -39px;
+        background-color: white;
+        padding: 0 23px;
+    }
+    header .menu__link#minue{
+        display: block;
+    }
+    header #top-header {
+        align-items: start;
+        height: 89px;
+        grid-template-columns: 1.5fr 0.8fr;
+    }
+    .front {
+        gap:0px;
+        flex-direction: column;
+        margin: 80px 5% 94px 16%;
+    }
+    .connect{
+        display: flex;
+        align-items: center;
+    }
+    .connect li{
+    margin-right: 32%;
+    }
+    .services main div a {
+        height: 193px;
+        padding-top: 6px;
+    }
+    .front main {
+        width: 83%;
+    }
+    header #navbar__list .off {
+        display: block;
+        color: white;
+        background-color: black;
+        padding: 10px 0;
+    }
+}
+
+@media (max-width:650px){
+    .services, .project {
+        height: auto;
+        background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20210324/pngtree-portfolio-memphis-playful-abstract-pink-image_593412.jpg);
+    }
+    .services main div a:hover::before {
+        height: 141px;
+        width: 80%;
+    }
+    .services div:nth-child(3) a:hover::after {
+        top: 71%;
+    }
+    .project main div a, .services main div a {
+        font-size: 23px;
+    }
+    .resume main img {
+        margin: 0 1%;
+    }
+    .connect li {
+        margin-right: 23%;
+    }
+    .about{
+        width: 72%;
+    }
+    .about main {
+        height: 923px;
+    }
+    .about__contennt {
+        margin: 0px 0 0 -23px;
+        width: 96%;
+        padding: 0 13px;
+    }
+    .project main {
+        grid-template-columns: repeat(1, 1fr);
+        padding-left:26px;
+    }
+    .services main div a {
+        height: 1fr;
+        width: 84%;
+        padding-top: 25px;
+    }
+    .services main {
+        grid-template-columns:1fr;
+    }
+    
+}
+
+@media (max-width:600px){   
+    .about {
+    gap: 17%;
+    }
+    .services main div a:hover::before {
+        height: 80%;
+    }
+    .about__contennt {
+        margin: 1px 0 0 -23%;
+        width: 74%;
+        padding: 0 13px;
+    }
+}
+
+@media (max-width:420px){   
+.connect {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.front aside{
+    width: 100%;
+}
+.front main .name {
+    font-size: 23px;
+}
+.front main {
+    flex-direction: column;
+}
+.about {
+    width: 98%;
+    display: block;
+}
+.about main {
+    width: 72%;
+    margin-left: 12%;
+    justify-content: center;
+    height: auto;
+}
+.about__contennt {
+    margin: 1px 0 0 -3%;
+    width: 87%;
+}
+.list {
+    display: grid;
+    margin: 35px 0;
+}
+.about button {
+    font-size: 17px;
+}
+.about__contennt .shorts {
+    margin: 68px 0;
+}
+.services, .project {
+    margin: 5px 5% 75px 53px;
+}
+.resume main {
+    flex-direction: column;
+    margin: 5px 5% 145px 50px;
+}
+}
