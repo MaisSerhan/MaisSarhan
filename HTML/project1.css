@@ -104,6 +104,10 @@
     content: "AI Project details";
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), 73%, #6f63b2);
 }
+.front .proAI2 span a:hover::before{
+    content: "Data mining Project details";
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), 73%, #63b29a);
+}
 .front .projects span a:hover::after{
     content: "";
     background-image: url(../static/photo/external-link.png);
