@@ -6,7 +6,7 @@ const navbar= ()=>{
     close.innerHTML="X";
     close.setAttribute("onclick",`show("#navbar__list")`);
     close.classList.add("off");
-    for(let i=1;i<6;i++){
+    for(let i=1;i<9;i++){
     let n=`Section ${i}`;
     let c=`section${i}`;
     let a =`<a class="menu__link" id="${c}" href="#${c}" ></a>`;
@@ -20,17 +20,26 @@ const navbar= ()=>{
     a.innerHTML = "Home";
     a.setAttribute("href","../index.html");
     a =document.querySelector("#section2");
-    a.innerHTML = "HTML & CSS";  
-    a.setAttribute("href","#fronth");
+    a.innerHTML = "Java";  
+    a.setAttribute("href","#frontj");
     a =document.querySelector("#section3");
     a.innerHTML = "JS"; 
     a.setAttribute("href","#frontjs");
     a =document.querySelector("#section4");
-    a.innerHTML = "Node JS"; 
-    a.setAttribute("href","#frontnjs");
+    a.innerHTML = `Node JS`;  
+    a.setAttribute("href","#frontNodejs");
     a =document.querySelector("#section5");
-    a.innerHTML = `Java`;  
-    a.setAttribute("href","#frontj");
+    a.innerHTML = `AI`;  
+    a.setAttribute("href","#frontAI");
+    a =document.querySelector("#section6");
+    a.innerHTML = "PHP"; 
+    a.setAttribute("href","#frontPhp");
+    a =document.querySelector("#section7");
+    a.innerHTML = `HTML & CSS`;  
+    a.setAttribute("href","#frontHtml");
+    a =document.querySelector("#section8");
+    a.innerHTML = `Graphics`;  
+    a.setAttribute("href","#frontG");
     ul.appendChild(close);  
   };
   navbar();
