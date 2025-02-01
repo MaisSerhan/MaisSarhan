@@ -1,7 +1,7 @@
 # Mais Sarhan  ⚛
 <img src="./static/photo/shorticon.png" width="400px">
 
-# Overview 🚀
+# Overview 🚀🇵🇸
 
 Welcome to my portfolio! This repository showcases my projects, skills, and experience in data science, AI, machine learning, and web development. It includes various projects that demonstrate my expertise in data analysis, predictive modeling, and software development.
 
@@ -25,7 +25,7 @@ Portfolio/
 
 # Projects ✅
 
-## 1. AI-Based PPV Prediction 🇦🇮 🔥
+## 1. AI-Based PPV Prediction 🔥
 
 - Description: Predicting PPV values using machine learning algorithms such as XGBoost, LightGBM, and CNN.
 - Technologies Used: Python, Jupyter Notebooks, XGBoost, LightGBM, Pandas, NumPy
