@@ -94,6 +94,9 @@ dl, ol, ul {
     border-radius: 100px;
     /* box-shadow: #b69292 0px 0px 15px 7px; */
 }
+.connect{
+    padding-top: 59px;
+}
 .connect img{
     width: 30px;
     border-radius: 40%;
@@ -247,10 +250,53 @@ height: 100%;
 /*project*/
 .project main {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 78px 1fr 78px 1fr 73px;
     justify-items: center;
-    padding: 0px  0px 70px  29px;
-    gap: 4% 0px;
+    padding: 0px 0px 0px 29px;
+    gap: 0% 11px;
+}
+.project main #java {
+    grid-area: 1 / 1 / 2 / 2;
+}
+.project main #js {
+    grid-area: 1 / 2 / 2 / 3;
+}
+.project main #php {
+    grid-area: 1 / 3 / 2 / 4;
+}
+.project main #java1 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+.project main #js1 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+.project main #php1 {
+    grid-area: 2 / 3 / 3/ 4;
+}
+.project main #ai {
+    grid-area: 3 / 1 / 4 / 2;
+}
+.project main #nojs {
+    grid-area: 3 / 2 / 4 / 3;
+}
+.project main #html {
+    grid-area: 3 / 3 / 4 / 4;
+}
+.project main #ai1 {
+    grid-area: 4 / 1 / 5 / 2;
+}
+.project main #nojs1 {
+    grid-area: 4 / 2 / 5 / 3;
+}
+.project main #html1 {
+    grid-area: 4 / 3 / 5 / 4;
+}
+.project main #graph {
+    grid-area: 5 / 1 / 6 / 2;
+}
+.project main #graph1 {
+    grid-area: 6 / 2 / 7 /2 ;
 }
 #services,#project ,#resume{
     margin: 106px;
@@ -274,7 +320,13 @@ height: 100%;
     width: 90%;
     background-color: #e6a9a9;
 }
-
+main div{
+    padding-top: 5px;
+}
+main div.proj{
+    height: 5px;
+    width: 5px;
+}
 .project main div a:hover{
     background-color: #f4d1d1;
     box-shadow: #b69292 0px 0px 15px 7px;
@@ -321,6 +373,18 @@ footer img{
 
 @media (max-width:1700px){
     .services main div a:hover::before{
+        height: 65%;
+        } 
+        .about main {
+        gap: 51px;
+        padding: 15px 47px;
+        background-size: 114% 136%;
+        background-position: -102px -63px;
+    }
+    .about__contennt {
+        height: 105%;
+    }
+    .services main div a:hover::before{
         height: 60%;
     }
     .services main div a:hover::after{ 
@@ -349,13 +413,6 @@ footer img{
     .services main div a:hover::before{
         height: 65%;
         } 
-        .about main {
-        height: 100%;
-        gap: 51px;
-        padding: 15px 47px;
-        background-size: 114% 136%;
-        background-position: -102px -63px;
-    }
     .about .img1{
         width:92%;
     }
@@ -372,6 +429,12 @@ footer img{
     }
     header .container.icons{
         display: none;
+    }
+    .about main {
+        height: 100%;
+    }
+    .about__contennt {
+        height: 91%;
     }
     
 }
@@ -400,6 +463,37 @@ footer img{
         height: 48%;
     }.project main {
         grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 78px 1fr 78px 1fr 73px 1fr 73px;
+    }
+    .project main #php {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+    .project main #php1 {
+        grid-area: 4 / 1 / 5 / 2;
+    }
+    .project main #ai {
+        grid-area: 3 / 2 / 4 / 3;
+    }
+    .project main #ai1 {
+        grid-area: 4 / 2 / 5 / 3;
+    }
+    .project main #nojs {
+        grid-area: 5 / 1 / 6 / 2;
+    }
+    .project main #nojs1 {
+        grid-area: 6 / 1 / 7 / 2;
+    }
+    .project main #html {
+        grid-area: 5/ 2 / 6 / 3;
+    }
+    .project main #html1 {
+        grid-area: 6 / 2 / 7 / 3;
+    }
+    .project main #graph {
+        grid-area: 7 / 1 / 8 / 2;
+    }
+    .project main #graph1 {
+        grid-area: 8 / 1 / 9 /2 ;
     }
     
 }
@@ -493,7 +587,7 @@ footer img{
     .front {
         gap:0px;
         flex-direction: column;
-        margin: 53px 0% 94px 16%;
+        margin: -5px 5% 94px 11%;
     }
     .connect{
         display: flex;
@@ -538,8 +632,8 @@ footer img{
         height: auto;
         background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20210324/pngtree-portfolio-memphis-playful-abstract-pink-image_593412.jpg);
         background-size: 253% 100%;
-        padding: 5px 5px 76px 0;
-        width: 83%;
+        padding: 5px 26px 76px 0;
+        width: 76%;
         margin-left: 64px;
     }
     .services main div a:hover::before {
@@ -574,8 +668,48 @@ footer img{
     }
     .project main {
         grid-template-columns: repeat(1, 1fr);
-        padding-left:26px;
+        grid-template-rows: 78px 1fr 78px 1fr 78px 1fr 78px 1fr 78px 1fr 78px 1fr 78px 1fr;
     }
+    .project{
+        padding-bottom: 0px;
+    }
+    .project main #js {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+    .project main #js1 {
+        grid-area: 4 / 1 / 5 / 2;
+    }
+        .project main #php {
+            grid-area: 5 / 1 / 5 / 2;
+        }
+        .project main #php1 {
+            grid-area: 6 / 1 / 7 / 2;
+        }
+        .project main #ai {
+            grid-area: 7 / 1 / 7 / 2;
+        }
+        .project main #ai1 {
+            grid-area: 8 / 1 / 9 / 2;
+        }
+        .project main #nojs {
+            grid-area: 9 / 1 / 10 / 2;
+        }
+        .project main #nojs1 {
+            grid-area: 10 / 1 / 10 / 2;
+        }
+        .project main #html {
+            grid-area: 11/ 1 / 11 / 2;
+        }
+        .project main #html1 {
+            grid-area: 12 / 1 / 13 / 2;
+        }
+        .project main #graph {
+            grid-area: 13 / 1 / 14 / 2;
+        }
+        .project main #graph1 {
+            grid-area: 14 / 1 / 14 /2;
+        }
+        
     .services main div a {
         height: 1fr;
         width: 84%;
@@ -682,8 +816,11 @@ footer img{
 .about__contennt .shorts {
     margin: 68px 0;
 }
-.services, .project {
-    margin: 5px 5% 75px 53px;
+.services, .project{
+    margin: 5px 5% 75px 28px;
+}
+.about {
+    margin: 5px 0 75px 3px;
 }
 .resume main {
     flex-direction: column;
@@ -691,6 +828,9 @@ footer img{
 }
 #tow, #three, #one {
     font-size: 14px;
+}
+.front {
+    margin: 53px 0% 94px 13%;
 }
 }
 @media (max-width: 400px) {

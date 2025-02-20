@@ -1,0 +1,427 @@
+body{
+    height: 690px;
+    background-color: black !important;
+  }
+  .cub{
+    margin-top: 50px;
+    margin-left: -5px;
+    position: relative; 
+    height: 300px;
+    width: 300px;
+    perspective:900px;
+   
+  }
+  .cub .iner{
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: cub-rotate 15s infinite linear;
+    left: 50%;
+    top: 110px;
+    width: 54px;
+    height: 289px;
+    transform-origin: center;
+  }
+  
+  .cub div .left{
+    position: absolute;
+    left: -38px;
+    top: 46px;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(51, 51, 51, 0.459);
+    box-shadow: inset 0px 0px 12px 2px rgb(0, 255, 38);
+    transform: rotateX(0deg) rotateY(90deg)  rotateZ(0deg);
+  
+  }
+  .cub div .top{
+    position: absolute;
+    left: 160px;
+    top: 46px;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(51, 51, 51, 0.459);
+    box-shadow: inset 0px 0px 12px 2px rgb(0, 255, 38);
+    transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg);
+  
+  }
+  .cub div .right{
+    position: absolute;
+    left: 160px;
+    top: 46px;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(51, 51, 51, 0.459);
+    box-shadow: inset 0px 0px 12px 2px rgb(0, 255, 38);
+    transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg);
+  
+  }
+  .cub div .button{
+    position: absolute;
+    left: 61px;
+    top: 146px;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(51, 51, 51, 0.459);
+    box-shadow: inset 0px 0px 12px 2px rgb(0, 255, 38);
+    transform: rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+  }
+  
+  .cub div .front {
+    position: absolute;
+    left: 59px;
+    top: 46px;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(51, 51, 51, 0.459);
+    box-shadow: inset 0px 0px 12px 2px rgb(0, 255, 38);
+    transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg) translateX(3px) translateY(0px) translateZ(99px);
+  }
+  
+    .cub div .back {
+    position: absolute;
+    left: 59px;
+    top: 46px;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(51, 51, 51, 0.459);
+    box-shadow: inset 0px 0px 12px 2px rgb(0, 255, 38);
+    transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg) translateX(3px) translateY(0px) translateZ(-99px);
+  }
+  .circal{
+    position: relative;
+   }
+    .circal div{
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    background-color: aqua;
+    box-shadow: 0px 2px 20px 3px rgb(0, 255, 38);
+    opacity: 0.6;
+    z-index: -1;
+   
+    }
+    .circal div:nth-child(1){
+       
+  background-color:blueviolet 5s;
+       
+  animation: circal1 10s linear  infinite;
+       
+  position: absolute;
+       
+  left: 3%;
+       
+  top:0px;
+    }
+    .circal div:nth-child(2){
+        background-color: aqua;
+        animation: circal2 9s linear  infinite 5s;
+        position: absolute;
+        left: 21%;
+        top:0px;
+        }
+     .circal div:nth-child(3){
+      animation: circal2 10s linear  infinite 5s;
+      position: absolute;
+      left: 90%;
+      top:0px;
+   }
+   .circal div:nth-child(4){
+     background-color: aqua;
+     animation: circal2 9s linear  infinite 5s;
+     position: absolute;
+     left: 80%;
+     top:0px;
+     }
+       .circal div:nth-child(5){
+        background-color: blueviolet;
+        animation: circal1 10s linear  infinite 5s;
+        position: absolute;
+        left: 85%;
+        top:0px;
+        }
+     .circal div:nth-child(6){
+        animation: circal1 9s linear  infinite 5s;
+        position: absolute;
+        background-color: blueviolet;
+        left: 30%;
+        top:0px;
+        }
+  .circal div:nth-child(7){
+    width: 40px;
+    height: 40px;
+    animation: circal2 10s linear  infinite;
+    position: absolute;
+    left: 7%;
+    top:0px;
+    opacity: .9;
+    }
+  .circal div:nth-child(8){
+    width: 40px;
+    height: 40px;
+    animation: circal3 10s linear  infinite;
+    position: absolute;
+    left: 23%;
+    top:0px;
+    opacity: .9;
+    }
+  .circal div:nth-child(9){
+    width: 40px;
+    height: 40px;
+    animation: circal2 10s linear  infinite;
+    position: absolute;
+    left: 80%;
+    top:0px;
+    opacity: .9;
+    }  
+  .circal div:nth-child(10){
+    width: 40px;
+    height: 40px;
+    animation: circal3 10s linear  infinite;
+    position: absolute;
+    left: 94%;
+    top:0px;
+    opacity: .9;
+    }
+  
+   .circal div:nth-child(11){
+        animation: circal4 9s linear  infinite;
+        position: absolute;
+        background-color: blueviolet;
+        left: 35%;
+        top: 102px;
+        width: 40px;
+        height: 40px;
+        }
+    .circal div:nth-child(12){
+        animation: circal5 9s linear  infinite;
+        position: absolute;
+        background-color: rgb(43, 220, 226);
+        left: 56%;
+        top:0px;
+        }  
+    .circal div:nth-child(13){
+        animation: circal4 9s linear  infinite;
+        position: absolute;
+        background-color: blueviolet;
+        left: 89%;
+        top: 7%;
+        width: 40px;
+        height: 40px;
+        }
+    .circal div:nth-child(14){
+        animation: circal5 9s linear  infinite;
+        position: absolute;
+        background-color: rgb(43, 211, 226);
+        left: 14%;
+        top: 84px;
+        }   
+   .circal div:nth-child(15){
+        animation: circal4 9s linear  infinite;
+        position: absolute;
+        background-color: blueviolet;
+        left: 72%;
+        top:0px;
+        }
+   .circal div:nth-child(16){
+        animation: circal5 9s linear  infinite;
+        position: absolute;
+        background-color: rgb(43, 214, 226);
+        left: 70%;
+        top: 17px;
+        }                         
+      @keyframes cub-rotate {
+        0%{
+            transform-origin:center;
+          transform:rotateY(0deg);
+        } 
+        100%{
+            transform-origin:center;
+          transform: rotateY(360deg);
+        } 
+      }
+      @keyframes circal1 {
+        0% {display: block;
+            
+            top: -60px;
+        }
+        100% {
+             display: block;
+            top: 658px;
+        }
+      }
+      @keyframes circal2 {
+        0% {
+            display: block;
+            top: 60px;
+        }
+        100% {
+            display: block;
+            top: 658px;
+        }
+      }
+      @keyframes circal3 {
+        0% {
+            display: block;
+            top: -1px;
+        }
+        100%{
+            top: 658px;
+        }
+      
+      }
+      @keyframes circal4 {
+        0% {
+            display: block;
+            top: 100px;
+        }
+        100% { display: block;
+           
+            top: 658px;
+        }
+      }
+      @keyframes circal5 {
+        0% {
+            display: block;
+            top: 400px;
+        }
+        100% { display: block;
+            
+            top: 658px;
+        }
+      }
+      .write{
+        width: 400px;
+        height: 82px;
+        font-family: 'Roboto', sans-serif;
+        color: rgb(234, 234, 222);
+        text-align: center;
+        font-size: large;
+        font-weight: bolder;
+        font-style: normal;
+        text-transform: capitalize;
+        display: flex;
+        position: relative;
+        top: 186px;
+        left: 31%;
+        border-width: 5px;
+        border-style: double;
+        border-color: transparent;
+        background-image: linear-gradient( black,black) , linear-gradient(90deg, darkblue, darkorchid);
+        background-origin: border-box;
+        background-clip: content-box,border-box;
+        padding-left: 5px;
+        padding-top: 0px;
+        box-sizing: border-box;
+        border-top-right-radius: 70em;
+        border-bottom-left-radius:70em;
+        animation: scal 5.2s linear infinite;
+        justify-content: center;
+        align-items: center;
+      }
+      @keyframes scal {
+        0%{
+            transform: scale(1.1);
+        }
+        100%{
+            transform: scal(3);
+        }
+        
+      }
+      nav{
+        font-style: italic;
+        font-family: ui-sans-serif;
+        position: absolute;
+        left: 0;
+        top: 43px;
+        display: flex;
+        gap: 6%;
+        margin-left: 23px;
+        width: 95%;
+        flex-direction: row;
+        justify-content: flex-start;
+        text-transform: capitalize;
+        flex-wrap: wrap;
+      }
+      nav a{
+        color: aliceblue;
+        text-decoration: none;
+      }
+      nav a:nth-child(1) img{
+        position: absolute;
+        left: 48px;
+        top: -2px;
+        width: 20px;
+        height: 20px;
+      }
+      nav a:nth-child(2) img{
+        position: absolute;
+        left: 72px;
+        top: -2px;
+        width: 25px;
+        height: 23px;
+      }
+      nav a:nth-child(3) img{
+        position: absolute;
+        left:44px;
+        top: -2px;
+        width: 25px;
+        height: 23px;
+      }
+      nav a:nth-child(4){
+        /* position: absolute; */
+        left: 466px;
+        top: 36px;
+      }
+      nav a:nth-child(4) img{
+        position: absolute;
+        left: 29px;
+    top: -18px;
+        width: 50px;
+        height: 50px;
+      }
+      nav a:nth-child(5) p{
+        position: absolute;
+        left: 31px;
+        top: -14px;
+        width: 50px;
+        height: 50px;
+      }
+      nav a:hover{
+       text-decoration: underline;
+      }
+      .alam{
+        background-image: linear-gradient(to bottom,black,black 34%,white 34%,white 70%,green 70%,green);
+        border:1px solid blue;
+        width: 40px;
+        height: 30px;
+        position: relative;
+        top: -387px;
+        left: 93%;
+      }
+      .alam::after{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        content: "";
+        width: 0px;
+        height: 0px;
+        border-style:solid;
+        border-width: 16px;
+        border-color: transparent transparent transparent red;
+      }
+      @media (max-width: 700px) {
+        .write{
+        width: 50%;
+        }
+        .alam {
+        top: -425px;
+        left: 88%;
+        }
+    }
+    @media (max-width: 500px) {
+        .write{
+        width: 80%;
+        left:9%;
+        font-size:15px;
+        }
+    }
