@@ -1,1 +1,112 @@
 
+body{
+    background-image: url(https://blush.design/api/download?shareUri=qimvX_Uf4PU7PB4E&w=800&h=800&fm=png);
+    background-size: 52% 55%;
+    background-position: -37px 83px;
+    /* background-repeat: no-repeat; */
+}
+
+.char{
+    display: flex;
+}
+.char .contgirl{
+    height: 634px;
+    background-image: url(https://blush.design/api/download?shareUri=wkMfSJkvhULUCpnw&w=800&h=800&fm=png);
+    background-size: auto;
+    background-position: -34px 130%;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+.char .contgirls{
+    background-image: url(https://blush.design/api/download?shareUri=wkMfSJkvhULUCpnw&w=800&h=800&fm=png);
+    background-size: auto;
+    background-position: -35px 132%;
+    display: inline-block;
+    height: 633px;
+    background-repeat: no-repeat;
+}
+.char .contgroup{
+    display: none;
+}
+.char .girl{
+    position: relative;
+    left: 0px;
+    top: 445px;
+    z-index: 1;
+}
+.char .group{
+    position: relative;
+    left: 154px;
+    top: 89px;
+    z-index: 1;
+}
+.char .girls{
+    position: relative;
+    right: -59%;
+    top: 64.7%;
+    /* margin-left: 119px; */
+    width: 257px;
+    /* max-width: 100%; */
+}
+.speed{
+    cursor: pointer;
+}
+.dial-container {
+    position: relative;
+    width: 66px;
+    height: 66px;
+}
+
+.dial {
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    border: 4px solid #009688;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 23px;
+}
+
+.dial-knob {
+    width: 16px;
+    height: 16px;
+    background-color: #FFEB3B;
+    border-radius: 50%;
+    position: absolute;
+    cursor: grab;
+    right: -8px;
+}
+.cust {
+    /* gap: 225px; */
+    display: flex; 
+    position: relative;
+    left: 188px;
+    top: -100px;
+    align-items: flex-end;
+    width: 65%;
+}
+.cust .cust-2{
+    top: 8px;
+    position: relative;
+}
+.cust2{
+    top: -734px;
+    left: 160px;
+}
+main{
+    height: 631px;
+}
+.cust3{
+    top: -861px;
+    left: 35px;
+}
+.cust2 , .cust3{
+    display: none;
+}
+.contlevel2, .contlevel3, .contlevel4, .contlevel5{
+    z-index: 1;
+}
+
