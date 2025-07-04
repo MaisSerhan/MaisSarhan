@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ابني كودك - Build Your Code</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚗</text></svg>">
+</head>
+<body>
+    <div class="game-container">
+        <h1>ابني كودك</h1>
+        <p>مرحباً بك أيها المبرمج الصغير! تحرك بالأسهم لاكتشاف الصناديق وتعلم أوامر البرمجة في C++، ثم قم بترتيبها لبناء الكود.</p>
+        <section class="front">
+            <div class="game-board" id="gameBoard">
+                <div class="player" id="player"></div>
+            </div>
+
+            <div class="controls" id="controls">
+                <button id="upBtn">⬆️</button>
+                <div class="horizontal-controls">
+                    <button id="leftBtn">⬅️</button>
+                    <button id="rightBtn">➡️</button>
+                </div>
+                <button id="downBtn">⬇️</button>
+            </div>
+        </section>
+
+        <div class="learning-content" id="learningContent">
+            <h3 id="learningContentTitle"></h3>
+            <p id="learningContentText"></p>
+            <pre><code id="learningContentCode"></code></pre>
+            <button id="closeLearningContent">فهمت، لنعود إلى الاستكشاف</button>
+        </div>
+
+        <div class="code-builder-area" id="codeBuilderArea">
+            <h2 class="section-title">رتب الكود الخاص بك!</h2>
+            <p id="codeBuilderMission">المهمة: قم بإنشاء برنامج C++ يطبع "مرحباً ايها العالم!" ثم يطلب من المستخدم إدخال اسمه ويطبعه مرة أخرى.</p>
+
+            <div class="code-blocks-palette" id="codeBlocksPalette">
+            </div>
+
+            <div class="code-drop-zone" id="codeDropZone">
+                <p>اسحب لبنات الكود إلى هنا لترتيبها...</p>
+            </div>
+
+            <div class="action-buttons">
+                <button id="checkCodeButton">تحقق من الكود</button>
+                <button id="resetCodeButton">إعادة تعيين</button>
+            </div>
+        </div>
+
+        <div class="overlay" id="messageOverlay">
+            <div class="overlay-content">
+                <span class="close-overlay" id="closeOverlay">&times;</span>
+                <h3 id="overlayTitle"></h3>
+                <p id="overlayMessage"></p>
+                <button id="overlayButton">حسناً</button>
+            </div>
+        </div>
+
+    </div>
+    <i class="bi bi-0-circle">a</i>
+
+    <audio id="discoverSound" src="sounds/discovered.mp3" preload="auto"></audio>
+    <audio id="moveSound" src="sounds/move.mp3" preload="auto"></audio>
+    <audio id="successSound" src="sounds/success.mp3" preload="auto"></audio>
+    <audio id="failSound" src="sounds/fail.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
