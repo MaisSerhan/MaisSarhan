@@ -46,11 +46,11 @@ const boxData = {
 };
 
 const gameBoxesPositions = [
-    { x: 50, y: 50, id: 'include-directives' },
-    { x: 150, y: 150, id: 'main-function' },
-    { x: 250, y: 70, id: 'variables-datatypes' },
-    { x: 350, y: 250, id: 'output-console' },
-    { x: 80, y: 300, id: 'input-console' },
+    { x: 60, y: 60, id: 'include-directives' },
+    { x: 20, y: 20, id: 'main-function' },
+    { x: 30, y: 70, id: 'variables-datatypes' },
+    { x: 10, y: 50, id: 'output-console' },
+    { x: 80, y: 30, id: 'input-console' },
 ];
 
 let gameBoxElements = {};
@@ -101,8 +101,8 @@ function initializeGame() {
         const box = document.createElement('div');
         box.classList.add('box-in-game');
         box.dataset.boxId = boxPos.id;
-        box.style.left = `${boxPos.x}px`;
-        box.style.top = `${boxPos.y}px`;
+        box.style.left = `${boxPos.x}%`;
+        box.style.top = `${boxPos.y}%`;
         box.textContent = boxPos.id.substring(0, 1).toUpperCase();
         gameBoard.appendChild(box);
         gameBoxElements[boxPos.id] = box;
