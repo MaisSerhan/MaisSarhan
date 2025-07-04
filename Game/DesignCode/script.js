@@ -418,3 +418,25 @@ function displayLearningContent(boxId) {
 
 initializeGame();
 //expectedCodeParts
+// دعم السحب وإفلات لبنات الكود على الهواتف والكمبيوتر
+new Sortable(codeBlocksPalette, {
+    group: {
+        name: 'code',
+        pull: 'clone',
+        put: false
+    },
+    sort: false,
+    animation: 150,
+    ghostClass: 'ghost'
+});
+
+new Sortable(codeDropZone, {
+    group: {
+        name: 'code',
+        pull: true,
+        put: true
+    },
+    sort: true,
+    animation: 150,
+    ghostClass: 'ghost'
+});
