@@ -1,0 +1,338 @@
+/* --- Root Variables for Theme Colors (جديد) --- */
+:root {
+    --primary-color: #007bff; /* لون أساسي، مثل الأزرق للأزرار الرئيسية */
+    --secondary-color: #6c757d; /* لون ثانوي، مثل الرمادي لأزرار التحكم */
+    --success-color: #28a745; /* لون النجاح، مثل الأخضر */
+    --danger-color: #dc3545; /* لون الخطر/الخطأ، مثل الأحمر */
+    --warning-color: #ffc107; /* لون التحذير/الصناديق غير المكتشفة، مثل الأصفر */
+    --info-color: #17a2b8; /* لون معلوماتي */
+    --background-light: #f0f2f5; /* لون خلفية خفيف */
+    --background-medium: #fff; /* لون خلفية متوسط (للصناديق الرئيسية) */
+    --background-accent: #e0f7fa; /* لون خلفية مميز (للعبة) */
+    --text-dark: #333; /* لون النص الداكن */
+    --text-light: #fff; /* لون النص الفاتح */
+}
+
+
+/* Basic Styling (remains mostly the same) */
+body {
+    font-family: 'Cairo', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--background-light); /* استخدام المتغير */
+    color: var(--text-dark); /* استخدام المتغير */
+    direction: rtl; /* Use rtl for Arabic text direction */
+    text-align: right;
+}
+
+.front{
+    display: flex;
+    /* Consider adding gap or margin if items are too close horizontally */
+    gap: 20px; /* Example: gap between game-board and controls */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    justify-content: center; /* Center items when they wrap */
+}
+.game-container {
+    background-color: var(--background-medium); /* استخدام المتغير */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 90%;
+    max-width: 900px;
+    text-align: center;
+    box-sizing: border-box;
+    overflow: hidden; /* لمنع ظهور شريط التمرير إذا خرج اللاعب أو الصناديق عن الحدود */
+    position: relative;
+}
+
+h1 {
+    color: var(--success-color); /* استخدام المتغير */
+    margin-bottom: 25px;
+    font-size: 2.5em;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.section-title {
+    color: var(--text-dark); /* يمكن تغيير هذا ليكون أكثر دفئًا إذا أردت */
+    font-size: 1.8em;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* --- New Styles for Game Board --- */
+.game-board {
+    position: relative; /* لجعل اللاعب والصناديق يتموضعون بشكل مطلق بداخله */
+    width: 100%;
+    max-width: 600px; /* حجم لوحة اللعب */
+    height: 400px; /* حجم لوحة اللعب */
+    background-color: var(--background-accent); /* استخدام المتغير */
+    border: 2px solid var(--primary-color); /* استخدام المتغير */
+    border-radius: 10px;
+    margin: 30px auto;
+    overflow: hidden; /* لإخفاء أي عناصر تخرج عن الحدود */
+}
+
+.player {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: var(--danger-color); /* استخدام المتغير */
+    border-radius: 5px;
+    transition: left 0.1s linear, top 0.1s linear; /* حركة ناعمة */
+    z-index: 10;
+}
+
+.box-in-game {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: var(--warning-color); /* استخدام المتغير */
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: var(--text-dark); /* استخدام المتغير */
+    cursor: pointer; /* يمكن النقر عليه حتى لو لم يتم لمسه للحالة البصرية */
+    transition: background-color 0.3s, opacity 0.3s; /* إضافة opacity للانتقال */
+    z-index: 5;
+    opacity: 0.8; /* يمكن أن يكون خافتًا في البداية */
+}
+
+.box-in-game.discovered {
+    background-color: var(--success-color); /* استخدام المتغير */
+    opacity: 0; /* يمكن إخفاؤه تمامًا عند الاكتشاف */
+    pointer-events: none; /* لمنع النقر عليه بعد الاكتشاف */
+}
+
+/* --- On-screen Controls (اختياري) --- */
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.controls button {
+    background-color: var(--secondary-color); /* استخدام المتغير */
+    color: var(--text-light); /* استخدام المتغير */
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    width: 60px; /* عرض موحد للأزرار */
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.controls button:hover {
+    background-color: #5a6268; /* يمكن أن يكون هذا أيضًا متغيرًا أغمق */
+}
+
+.horizontal-controls {
+    display: flex;
+    gap: 10px;
+}
+
+/* --- Rest of existing styles (Learning Content, Code Builder, Overlay) --- */
+
+.learning-content {
+    display: none;
+    background-color: #e9f7ef; /* A lighter shade of green for learning content background */
+    border-radius: 10px;
+    padding: 25px;
+    margin-top: 30px;
+    text-align: right; /* Adjusted to right for RTL */
+    border: 1px solid #c3e6cb;
+}
+
+.learning-content.active {
+    display: block;
+}
+
+.learning-content h3 {
+    color: var(--success-color); /* استخدام المتغير */
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    border-bottom: 1px dotted #a3d9b0;
+    padding-bottom: 8px;
+}
+
+.learning-content pre {
+    background-color: #f8f9fa;
+    border: 1px solid #e2e6ea;
+    border-right: 5px solid var(--success-color); /* Adjust border to right for RTL */
+    border-left: none; /* Remove left border */
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 0.95em;
+    line-height: 1.5;
+    color: #363636;
+    text-align: left; /* Keep code LTR for readability */
+}
+
+.learning-content button {
+    background-color: var(--primary-color); /* استخدام المتغير */
+    color: var(--text-light); /* استخدام المتغير */
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 20px;
+    transition: background-color 0.2s;
+}
+
+.learning-content button:hover {
+    background-color: #0056b3; /* A darker shade of primary-color */
+}
+
+.code-builder-area {
+    display: none;
+    margin-top: 30px;
+    text-align: right; /* Adjusted to right for RTL */
+    padding-top: 30px;
+}
+
+.code-builder-area.active {
+    display: block;
+}
+
+.code-blocks-palette {
+    background-color: #f0f8ff; /* A lighter shade for the palette */
+    border: 1px dashed var(--primary-color); /* Using primary color for border */
+    padding: 20px;
+    border-radius: 10px;
+    min-height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.code-block {
+    background-color: var(--secondary-color); /* استخدام المتغير */
+    color: var(--text-light); /* استخدام المتغير */
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: grab;
+    font-size: 0.9em;
+    margin: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    user-select: none;
+    direction: ltr; /* Keep code blocks LTR for code readability */
+}
+
+.code-drop-zone {
+    background-color: #f8f9fa; /* Light background for drop zone */
+    border: 2px dashed var(--primary-color); /* Using primary color for border */
+    min-height: 150px;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+    text-align: left; /* Align placeholder text to left for LTR code */
+    direction: ltr; /* Ensure blocks stack LTR */
+}
+
+.code-drop-zone .code-block {
+    background-color: var(--primary-color); /* Using primary color for dropped blocks */
+    cursor: default;
+}
+
+.action-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.action-buttons button {
+    background-color: var(--success-color); /* استخدام المتغير */
+    color: var(--text-light); /* استخدام المتغير */
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.2s;
+}
+
+.action-buttons button:hover {
+    background-color: #218838; /* A darker shade of success-color */
+}
+
+/* --- Overlay Styles --- */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.overlay-content {
+    background-color: var(--background-medium); /* استخدام المتغير */
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.overlay-content h3 {
+    color: var(--primary-color); /* استخدام المتغير */
+    margin-bottom: 15px;
+}
+
+.overlay-content button {
+    background-color: var(--primary-color); /* استخدام المتغير */
+    color: var(--text-light); /* استخدام المتغير */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.overlay-content button:hover {
+    background-color: #0056b3; /* A darker shade of primary-color */
+}
+
+.close-overlay {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #aaa;
+}
+
+/* Adjustments for RTL where necessary (e.g., border-left to border-right) */
+/* The existing `direction: rtl` on `body` handles most text alignment.
+   Explicit `text-align: right` or `text-align: left` might be needed for specific elements. */
