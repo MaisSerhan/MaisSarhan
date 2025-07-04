@@ -332,7 +332,10 @@ p {
     cursor: pointer;
     color: #aaa;
 }
-
+.ghost {
+    opacity: 0.4;
+    background-color: #ccc;
+}
 /* Adjustments for RTL where necessary (e.g., border-left to border-right) */
 /* The existing `direction: rtl` on `body` handles most text alignment.
    Explicit `text-align: right` or `text-align: left` might be needed for specific elements. */
