@@ -50,6 +50,7 @@ const navbar= ()=>{
   };
   
   navbar();
+  
   function gridAria(){
     const allDivs = document.querySelectorAll('.project main div');
     let n=1,m=0;
@@ -71,8 +72,7 @@ const navbar= ()=>{
     }
 
   }
-  gridAria()
- 
+  //gridAria()
 
   function aside(li){
     connect=document.querySelector(`#connect span.${li}`);
