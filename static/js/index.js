@@ -33,6 +33,7 @@ const navbar= ()=>{
             Projects
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="#grad">Graduation Project</a></li>
             <li><a class="dropdown-item" href="#java">Java</a></li>
             <li><a class="dropdown-item" href="#js">Java-Script</a></li>
             <li><a class="dropdown-item" href="#php">PHP </a></li>
