@@ -256,48 +256,6 @@ height: 100%;
     padding: 0px 0px 0px 29px;
     gap: 0% 11px;
 }
-.project main #java {
-    grid-area: 1 / 1 / 2 / 2;
-}
-.project main #js {
-    grid-area: 1 / 2 / 2 / 3;
-}
-.project main #php {
-    grid-area: 1 / 3 / 2 / 4;
-}
-.project main #java1 {
-    grid-area: 2 / 1 / 3 / 2;
-}
-.project main #js1 {
-    grid-area: 2 / 2 / 3 / 3;
-}
-.project main #php1 {
-    grid-area: 2 / 3 / 3/ 4;
-}
-.project main #ai {
-    grid-area: 3 / 1 / 4 / 2;
-}
-.project main #nojs {
-    grid-area: 3 / 2 / 4 / 3;
-}
-.project main #html {
-    grid-area: 3 / 3 / 4 / 4;
-}
-.project main #ai1 {
-    grid-area: 4 / 1 / 5 / 2;
-}
-.project main #nojs1 {
-    grid-area: 4 / 2 / 5 / 3;
-}
-.project main #html1 {
-    grid-area: 4 / 3 / 5 / 4;
-}
-.project main #graph {
-    grid-area: 5 / 1 / 6 / 2;
-}
-.project main #graph1 {
-    grid-area: 6 / 2 / 7 /2 ;
-}
 #services,#project ,#resume{
     margin: 106px;
     height: 5px;
