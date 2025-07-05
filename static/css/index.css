@@ -1,3 +1,4 @@
+/*header*/
 header{
     position: fixed;
     z-index: 500;
@@ -125,7 +126,7 @@ dl, ol, ul {
 /*main*/
 .about main {
     background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20210324/pngtree-pink-playful-abstract-portfolio-memphis-image_593407.jpg);
-    height: 618px;
+    height: 744px;
     gap: 51px;
     padding: 15px 47px;
     background-size: 106% 124%;
@@ -249,12 +250,10 @@ height: 100%;
 
 /*project*/
 .project main {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 78px 1fr 78px 1fr 73px;
+    display: flex;
+    flex-wrap: wrap;
     justify-items: center;
     padding: 0px 0px 0px 29px;
-    gap: 0% 11px;
 }
 #services,#project ,#resume{
     margin: 106px;
@@ -278,8 +277,11 @@ height: 100%;
     width: 90%;
     background-color: #e6a9a9;
 }
+.project section{
+    width: 30%;
+}
 main div{
-    padding-top: 5px;
+    padding-top: 26px;
 }
 main div.proj{
     height: 5px;
@@ -289,9 +291,6 @@ main div.proj{
     background-color: #f4d1d1;
     box-shadow: #b69292 0px 0px 15px 7px;
 
-}
-.project main div{    
-    width: 100%;
 }
 
 /*resume*/
@@ -308,7 +307,7 @@ main div.proj{
     align-items: center;
 }
 .resume main img{margin: 5px;}
-
+/*footer*/
 footer{
     display: flex;
     background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20210324/pngtree-portfolio-playful-abstract-pink-memphis-image_593409.jpg);
@@ -457,6 +456,9 @@ footer img{
 }
 
 @media (max-width:900px){
+    .project section{
+        width: 40%;
+    }
     .about video {
         margin: 7%;
         width: 39%;
@@ -615,7 +617,7 @@ footer img{
     }
     .about main {
         width: 109%;
-        height: 1048px;
+        height: 1187px;
         padding: 50px 18% 57% 25%;
         background-size: 230% 136%;
     }
@@ -624,6 +626,9 @@ footer img{
         width: 96%;
         padding: 0 13px;
     }
+    .project section{
+        width: 100%;
+    }
     .project main {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: 78px 1fr 78px 1fr 78px 1fr 78px 1fr 78px 1fr 78px 1fr 78px 1fr;
@@ -631,43 +636,7 @@ footer img{
     .project{
         padding-bottom: 0px;
     }
-    .project main #js {
-        grid-area: 3 / 1 / 4 / 2;
-    }
-    .project main #js1 {
-        grid-area: 4 / 1 / 5 / 2;
-    }
-        .project main #php {
-            grid-area: 5 / 1 / 5 / 2;
-        }
-        .project main #php1 {
-            grid-area: 6 / 1 / 7 / 2;
-        }
-        .project main #ai {
-            grid-area: 7 / 1 / 7 / 2;
-        }
-        .project main #ai1 {
-            grid-area: 8 / 1 / 9 / 2;
-        }
-        .project main #nojs {
-            grid-area: 9 / 1 / 10 / 2;
-        }
-        .project main #nojs1 {
-            grid-area: 10 / 1 / 10 / 2;
-        }
-        .project main #html {
-            grid-area: 11/ 1 / 11 / 2;
-        }
-        .project main #html1 {
-            grid-area: 12 / 1 / 13 / 2;
-        }
-        .project main #graph {
-            grid-area: 13 / 1 / 14 / 2;
-        }
-        .project main #graph1 {
-            grid-area: 14 / 1 / 14 /2;
-        }
-        
+  
     .services main div a {
         height: 1fr;
         width: 84%;
