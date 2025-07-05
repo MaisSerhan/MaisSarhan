@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Mais Sarhan - FAQ</title>
+    
+    <!-- SEO Meta -->
+    <meta name="description" content="Frequently asked questions about Mais Sarhan's services and work process." />
+    <meta name="keywords" content="FAQ, questions, web development, services, portfolio, Mais Sarhan" />
+    <meta name="author" content="Mais Sarhan" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Mais Sarhan - FAQ" />
+    <meta property="og:description" content="Common questions and answers about Mais Sarhan’s services." />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mais Sarhan - FAQ" />
+    <meta name="twitter:description" content="Common questions and answers about Mais Sarhan’s services." />
+
+    <!-- Favicon -->
+    <link rel="icon" href="../Assets/images/shorts.png" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="../Assets/css/faq.css" />
+</head>
+<body>
+
+    <header>
+        <h1>Frequently Asked Questions</h1>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="portfolio.html">About</a></li>
+                <li><a href="contact.html">Connect</a></li>
+                <li><a href="services.html">Demonstration</a></li>
+                <li><a href="about.html">Magazine</a></li>
+                <li><a href="album.html">Thesis</a></li>
+                <li><a href="privacy.html">Methodology</a></li>
+                <li><a href="return.html">Project Structure</a></li>
+                <li><a href="terms.html">Running</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="faq-container">
+            <h2>🤔 Frequently Asked Questions</h2>
+
+            <div class="faq-card">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>What Name Haven?</span>
+                    <span class="faq-toggle-icon">➕</span>
+                </div>
+                <div class="faq-answer">
+                    <p>ان الأم هي ملجأ للجميع 👩‍👧‍👦💖 و'هافن' تعني الملاذ والملجأ 🏡✨ والتي ستكون ملجأ للأم 🤰❤️.</p>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>How long does it take to complete a website?</span>
+                    <span class="faq-toggle-icon">➕</span>
+                </div>
+                <div class="faq-answer">
+                    <p>6 months of preparation, divided into 3 months of preparation and writing the thesis, and 3 months of preparing and preparing the project.</p>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Target group?</span>
+                    <span class="faq-toggle-icon">➕</span>
+                </div>
+                <div class="faq-answer">
+                    <p>The concerned group is pregnant women and mothers up to the age of 3 years for new mothers or mothers with children.</p>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>How can I try it?</span>
+                    <span class="faq-toggle-icon">➕</span>
+                </div>
+                <div class="faq-answer">
+                    <p>You can try the site for free by viewing the main pages, but if you want to try the paid version, which includes creating accounts and booking an appointment with a doctor, contact the email.</p>
+                    <p>You can reach me on the <a href="contact.html">Contact</a> page or email: <a href="mailto:maisserhan09@gmail.com">maisserhan09@gmail.com</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <p>&copy; 2025 Mais Sarhan. All rights reserved. ⭐️ | 
+           <a href="privacy.html">Privacy Policy</a> | 
+           <a href="terms.html">Terms & Conditions</a>
+        </p>
+    </footer>
+
+    <script>
+    function toggleFAQ(el) {
+        const card = el.parentElement;
+        const allCards = document.querySelectorAll('.faq-card');
+        allCards.forEach(c => {
+            if (c !== card) {
+                c.classList.remove('active');
+                c.querySelector('.faq-toggle-icon').textContent = '➕';
+            }
+        });
+
+        card.classList.toggle('active');
+        const icon = card.querySelector('.faq-toggle-icon');
+        icon.textContent = card.classList.contains('active') ? '➖' : '➕';
+    }
+    </script>
+</body>
+</html>

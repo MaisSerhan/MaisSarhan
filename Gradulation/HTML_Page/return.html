@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Haven - Project Structure</title>
+    
+    <!-- SEO Meta -->
+    <meta name="description" content="Understand Mais Sarhan’s return and refund policy for services and digital products." />
+    <meta name="keywords" content="Return Policy, Refunds, Services, Digital Products" />
+    <meta name="author" content="Mais Sarhan" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Mais Sarhan - Return Policy" />
+    <meta property="og:description" content="Return and refund policy for services and digital products." />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mais Sarhan - Return Policy" />
+    <meta name="twitter:description" content="Return and refund policy for services and digital products." />
+
+    <!-- Favicon -->
+    <link rel="icon" href="../Assets/images/shorts.png" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="../Assets/css/style.css" />
+</head>
+<body>
+
+    <header>
+        <h1>Project Structure</h1>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="portfolio.html">About</a></li>
+                <li><a href="contact.html">Connect</a></li>
+                <li><a href="services.html">Demonstration</a></li>
+                <li><a href="about.html">Magazine</a></li>
+                <li><a href="album.html">Thesis</a></li>
+                <li><a href="privacy.html">Methodology</a></li>
+                <li><a href="return.html">Project Structure</a></li>
+                <li><a href="terms.html">Running</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>📁 Project Structure - <code>Haven_FBAI</code></h1>
+            <pre>
+            Haven_FBAI/
+            ├── index.html                  // Main landing page
+            ├── README.md                   // Project overview and documentation
+            ├── server.js                   // Node.js file to serve the main page
+            │
+            ├── Haven_AI/                   // AI model code and related files
+            │
+            ├── Pages/                      // Front-end pages (HTML, e.g., about, contact, etc.)
+            │
+            ├── SoundTest/                  // Test audio files for the AI model
+            │
+            ├── Haven_Backend-main/         // Node.js backend (routes, controllers, etc.)
+            │
+            └── Assets/                     // Shared front-end assets (CSS, JS, images)
+            </pre>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mais Sarhan. All rights reserved. ⭐️ | 
+           <a href="privacy.html">Privacy Policy</a> | 
+           <a href="terms.html">Terms & Conditions</a>
+        </p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("main-nav").classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>
