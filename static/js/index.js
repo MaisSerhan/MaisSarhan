@@ -49,7 +49,28 @@ const navbar= ()=>{
   };
   
   navbar();
-  
+  function gridAria(){
+    const allDivs = document.querySelectorAll('.project main div');
+    let n=1,m=0;
+    let count=0;
+    for(let i=0;i<allDivs.length;i++){
+      
+      count++;
+      if(count<3){
+         allDivs[i].style.gridArea =`${n}/${count}/${n+1}/${count+1}`;
+      }
+      else{
+        allDivs[i].style.gridArea =`${n}/${count}/${n+1}/${count+1}`;
+        n++;
+        count=0;
+        
+      }
+      console.log(allDivs[i], allDivs[i].style.gridAria)
+      
+    }
+
+  }
+  gridAria()
  
 
   function aside(li){
