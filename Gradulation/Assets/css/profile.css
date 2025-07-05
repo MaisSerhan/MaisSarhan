@@ -1,0 +1,76 @@
+@import url(./style.css);
+.project {
+    background-color: #fff;
+    border-left: 5px solid var(--primary-color);
+    padding: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+.full-bg {
+  background-image: url('https://static.wixstatic.com/media/4bf508bbd14a423fb02f9e732519c0c2.jpg/v1/fill/w_1954,h_935,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4bf508bbd14a423fb02f9e732519c0c2.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+.dropdown-item:active {
+  background-color: #f9d2ff;
+}
+.accordion-container {
+  background-color: var(--sec-backg-col);
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px; /* Add margin to separate from title */
+}
+#ho {
+    color: #a10036 !important;
+    background-color: #ffcfe7;
+}
+.bgpink, .accordion-button:not(.collapsed) {
+    color: #ff009d;
+    background-color: #ffd3e4;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project-title {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.project-subheading {
+    color: var(--secondary-color);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.project-description {
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.project-date {
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.project-logo {
+    display: block;
+    margin: 10px 0;
+    max-width: 100px;
+    height: auto;
+}
+
+.tech-list {
+    list-style-type: square;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
