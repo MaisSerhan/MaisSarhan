@@ -1,157 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MaisSerhan Protofilo">
-    <meta name="author" content="Mais Sarhan">
-    <meta name="keywords" content="PTUK, CSE, Kadoorie, Protofilo, MaisSerhan">
-    <!-- رابط Bootstrap للحصول على التصميم الجاهز للبطاقات والأزرار -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="static/css/index.css">
-    <link rel="shortcut icon" href="static/photo/shorticons.png">
-    <title>Mais Sarhan portfolio-website</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Haven - Home</title>
+    
+    <!-- SEO Meta -->
+    <meta name="description" content="Welcome to Mais Sarhan's website — offering professional services and portfolio showcases." />
+    <meta name="keywords" content="Mais Sarhan, portfolio, services, contact, professional website" />
+    <meta name="author" content="Mais Sarhan" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Mais Sarhan - Home" />
+    <meta property="og:description" content="Discover Mais Sarhan's portfolio and services." />
+    <meta property="og:type" content="website" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mais Sarhan - Home" />
+    <meta name="twitter:description" content="Discover Mais Sarhan's portfolio and services." />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="Assets/images/shorts.png" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="Assets/css/style.css" />
 </head>
 <body>
-    <!-- Top header menu containing logo and Navigation bar -->
-    <header class="page__header ">
-        <div id="top-header">
-            <div id="logo">
-                <img src="static/photo/newMAis2.png" width="65px" height="55px">
-            </div>
-            <nav class="navbar__menu">
-                <ul id="navbar__list"></ul>
-            </nav>
-            <div class="container icons">
-                <img src="https://cdn3d.iconscout.com/3d/free/thumb/free-c-language-3d-icon-download-in-png-blend-fbx-gltf-file-formats--logo-mobile-developer-programming-pack-logos-icons-5453029.png" width="40px">
-                <img src="https://cdn.worldvectorlogo.com/logos/java.svg" width="40px">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png" width="40px">
-                <img src="https://d1uxiwmpc9j4yg.cloudfront.net/images/all/71302-express.js-chrome-javascript-system-node.js-v8-runtime_1687631713.png" width="40px">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" width="40px">
-                <img src="https://delta-dev-software.fr/wp-content/uploads/2024/05/CSS-Logo.png" width="70px">
-                <img src="https://media.licdn.com/dms/image/v2/D4E12AQFfe1nZbaWdMw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1698604163003?e=2147483647&v=beta&t=zrcrB8lfoVmZo0LcSLgut3A_4PwE6YFe9EK3iy17L2Y" width="73px">
-                <img src="https://cdn-icons-png.flaticon.com/256/8131/8131880.png" width="40px">
-            </div>
-        </div>
+
+    <header>
+        <h1>Welcome to Haven Website</h1>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="HTML_Page/portfolio.html">About</a></li>
+                <li><a href="HTML_Page/contact.html">Connect</a></li>
+                <li><a href="HTML_Page/services.html">Demonstration</a></li>
+                <li><a href="HTML_Page/about.html">Magazine</a></li>
+                <li><a href="HTML_Page/album.html">Thesis</a></li>
+                <li><a href="HTML_Page/privacy.html">Methodology</a></li>
+                <li><a href="HTML_Page/return.html">Project Structure</a></li>
+                <li><a href="HTML_Page/terms.html">Running</a></li>
+                <li><a href="HTML_Page/faq.html">FAQ</a></li>
+            </ul>
+        </nav>
     </header>
-    <section class="front" id="front">
-        <aside>
-            <ul class="connect" id="connect">
-                <li type="none" class="li1" ><a href="mailto:maisserhan09@gmail.com" class="email" title="email" onmouseover="aside('li1')" onmouseleave="aside1('li1')"><img src="https://static.vecteezy.com/system/resources/previews/002/205/854/non_2x/email-icon-free-vector.jpg" width="30px"><span class="li1" ><button type="button" class="btn btn-secondary">Email</button></span> </a></li>
-                <li type="none" class="li2" ><a href="https://github.com/MaisSerhan" class="githube" title="github" onmouseover="aside('li2')" onmouseleave="aside1('li2')"><img src="https://www.logo.wine/a/logo/GitHub/GitHub-Logo.wine.svg" height="50px"><span class="li2" ><button type="button" class="btn btn-dark">Githube</button></span></a></li>
-                <li type="none" class="li3" ><a href="https://www.linkedin.com/in/mais-anwer/" class="linkedin" title="linked in" onmouseover="aside('li3')" onmouseleave="aside1('li3')"><img src="static/photo/linkedin.png"> <span class="li3" ><button type="button" class="btn btn-primary">Linkedin</button></span></a></li>
-                <li type="none" class="li4" ><a href="https://www.hackerrank.com/profile/maisanwer59" class="hakerrank" title="hackerrank" onmouseover="aside('li4')" onmouseleave="aside1('li4')"><img src="static/photo/hackerrank.png"> <span class="li4" ><button type="button" class="btn btn-success">Hakerrank</button></span></a></li>
-                <li type="none" class="li5" ><a href="https://codeforces.com/profile/maisserhan09" class="codeforce" title="codeforce" onmouseover="aside('li5')" onmouseleave="aside1('li5')"><img src="https://cdn.iconscout.com/icon/free/png-256/free-code-forces-3521352-2944796.png?f=webp&w=256"> <span class="li5" ><button type="button" class="btn btn-warning">Codeforces</button></span></a></li>
-              </ul>
-        </aside>
-        <main>
-            <div>
-                <p class="fail">CSE computer system engineer</p>
-                <h1 class="name">hi, I'm<i> mais serhan </i> <br> from Palestine nablus</h1>
-            </div>
-            <img class="img1"src="static/photo/Brooklyn_Fresh.png">
-        </main>
-    </section>
-    <section class="about" id="about">
-        <aside>
-            <a class="up" href="#">^</a>
-        </aside>
-        <main>
-          <div class="col-4">
-            <img class="img2 img1"src="static/photo/Relaxing.png" >
-          </div>
-          <div class="about__contennt col-8 col-xs-12">
-            <h1>About me</h1>
-            <div>
-                <P class="shorts">I am Mais Sarhan, Computer Systems Engineering, I specialize in Full-Stack Devloper and I study at 
-                    Palestine Technical University-Kadoorie<br>
-                    Come with me on a journey in the field of Computer Engineering and delve deeper into many fields specialized in this field. 
-                    If you are interested in this field and live the journey with me, do not forget to visit my pages.
-                    <a href="#connect" class="con" > connect me</a> so that we may exchange experiences.
-                </p>
-                <div class="list">
-                    <div><button onclick="hideShow(1)" class="listSkil">skills</button></div>
-                    <div><button onclick="hideShow(2)" class="listex">experience</button></div>
-                    <div><button onclick="hideShow(3)" class="listed">education</button></div>
-                </div>
-                <div id="one">
-                    <p>Oct.2024 - Jan-2025  &nbsp &nbsp &nbsp   PHP & AI</p>
-                    <p>Feb.2024 - Jul.2024  &nbsp &nbsp &nbsp   Js with Node Js </p>
-                    <p>Qct.2023 - Feb.2024  &nbsp &nbsp &nbsp    Data Base SQL, NO SQL </p>
-                    <p>Feb.2023 - Dec.2023  &nbsp &nbsp &nbsp    HTMl5 & Css</p>
-                    <p>Oct.2022 - Jan-2023  &nbsp &nbsp &nbsp    data structures</p>
-                    <p>Feb.2022 - Jul.2022  &nbsp &nbsp &nbsp   java & problem solve</p>
-                    <p>Oct.2021 - Jan.2022  &nbsp &nbsp &nbsp  c++ and problem solve</p>
-                </div>
-                <div id="tow">
-                    <p>2024 &nbsp &nbsp &nbsp achive project in PHP</p>
-                    <p>2024 &nbsp &nbsp &nbsp achive project in Udacity</p>
-                    <p>2024 &nbsp &nbsp &nbsp work in git and up the project in github</p>
-                    <p>2023 &nbsp &nbsp &nbsp do some project by HTML5 & Css </p>
-                    <p>2022 &nbsp &nbsp &nbsp work the project by java </p>
-                    <p>2021 &nbsp &nbsp &nbsp solve some problem in hackerrank and codeforce</p>
-                </div>
-                <div id="three">
-                    <p>May.2024 - Aug.2024 &nbsp &nbsp &nbsp start study in Udacity</p>
-                    <p>Jan.2024 - Mar.2024 &nbsp &nbsp &nbsp Code Academy</p>
-                    <p>Sep.2021 - now &nbsp &nbsp &nbsp study in Palestine Technical University-Kadoorie - PTUK CSE</p>
-                </div>
-            </div>
-          </div>
-        </main>
-    </section>
-    <div id="services"></div>
-   <!--  <section class="services" >
-       <h1>My Services</h1>
-        <main>
-            <div><a href="#project"><img src="static/photo/front.png">Front-End Website</a></div>
-            <div><a href="#project"><img src="static/photo/java (1).png">Java with Data Structure Application</a></div>
-            <div><a href="#project"><img src="static/photo/coding.png">Website design</a></div>
-        </main>
-    </section>   -->
-    <div id="project"></div>
-    <section class="project" >
-        <h1>My Projects</h1>
-        <main>
-            <div id="grad"></div>
-            <div id="java"></div>
-            <div id="js"></div>
 
-            <div id="grad1"><a href="HTML/project1.html#frontg">Graduation Project</a></div>
-            <div id="java1"><a href="HTML/project1.html#frontj">Java</a></div>
-            <div id="js1"><a href="HTML/project1.html#frontjs">Java Script</a></div>
+    <main>
+        <section>
+            <h2>Welcome to Haven</h2>
+            <p>🌟 Haven seeks to be the premier online resource for supporting and empowering parents in Palestine to nurture their children's healthy and happy development from pregnancy through early childhood. 👶❤️🏡</p>
+        </section>
 
-            <div id="php"></div>
-            <div id="ai"></div>
-            <div id="nojs"></div>
-            
-            <div id="php1"><a href="HTML/project1.html#frontPhp">PHP</a></div>
-            <div id="ai1"><a href="HTML/project1.html#frontAI">AI</a></div>
-            <div id="nojs1"><a href="HTML/project1.html#frontNodej">Node JS</a></div>
-           
-            <div id="html"></div>
-            <div id="graph"></div>
-            <div id=""></div>
-            
-            <div id="html1"><a href="HTML/project1.html#frontHtml">HTML & CSS</a></div>
-            <div id="graph1"><a href="HTML/project1.html#frontG">Graphics</a></div>
-            <div id=""></div>
-        </main>
-    </section>
-    <div id="resume"></div>
-    <section class="resume">
-        <main>
-            <h1><a href="resumy/MaisSarhan_Resume.pdf">My Resume</a></h1>
-            <img src="static/photo/resm.png" width="257px">
-            
-        </main>
-    </section>
+        <section>
+            <h2>Empowering Infant Care with AI</h2>
+            <p>Your intelligent assistant for infant cry analysis</p>
+        </section>
+    </main>
+
     <footer>
-        <h1>have a nice day</h1>
+        <p>&copy; 2025 Mais Sarhan. All rights reserved. ⭐️| 
+           <a href="HTML_Page/privacy.html">Privacy Policy</a> | 
+           <a href="HTML_Page/terms.html">Terms & Conditions</a>
+        </p>
     </footer>
-    <script src="static/js/index.js"></script>
+
+    <script>
+    function toggleMenu() {
+        document.getElementById("main-nav").classList.toggle("active");
+    }
+    </script>
+
 </body>
 </html>
