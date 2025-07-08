@@ -678,6 +678,7 @@ main a:hover {
 }
 main div img{
   border-radius: 50px;
+  border: #e6a9a9 5px solid;
 }
 /*resume*/
 .resume main{
@@ -826,7 +827,6 @@ top: 70%;
 
 
 @media (max-width:700px){
-    
     header #navbar__list {
         display: none;
         flex-direction: column;
