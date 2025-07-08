@@ -1,427 +1,983 @@
-body{
-    height: 690px;
-    background-color: black !important;
-  }
-  .cub{
-    margin-top: 50px;
-    margin-left: -5px;
-    position: relative; 
-    height: 300px;
-    width: 300px;
-    perspective:900px;
-   
-  }
-  .cub .iner{
-    position: absolute;
-    transform-style: preserve-3d;
-    animation: cub-rotate 15s infinite linear;
-    left: 50%;
-    top: 110px;
-    width: 54px;
-    height: 289px;
-    transform-origin: center;
-  }
-  
-  .cub div .left{
-    position: absolute;
-    left: -38px;
-    top: 46px;
-    width: 200px;
-    height: 200px;
-    background-color: rgba(51, 51, 51, 0.459);
-    box-shadow: inset 0px 0px 12px 2px rgb(0, 255, 38);
-    transform: rotateX(0deg) rotateY(90deg)  rotateZ(0deg);
-  
-  }
-  .cub div .top{
-    position: absolute;
-    left: 160px;
-    top: 46px;
-    width: 200px;
-    height: 200px;
-    background-color: rgba(51, 51, 51, 0.459);
-    box-shadow: inset 0px 0px 12px 2px rgb(0, 255, 38);
-    transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg);
-  
-  }
-  .cub div .right{
-    position: absolute;
-    left: 160px;
-    top: 46px;
-    width: 200px;
-    height: 200px;
-    background-color: rgba(51, 51, 51, 0.459);
-    box-shadow: inset 0px 0px 12px 2px rgb(0, 255, 38);
-    transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg);
-  
-  }
-  .cub div .button{
-    position: absolute;
-    left: 61px;
-    top: 146px;
-    width: 200px;
-    height: 200px;
-    background-color: rgba(51, 51, 51, 0.459);
-    box-shadow: inset 0px 0px 12px 2px rgb(0, 255, 38);
-    transform: rotateX(90deg) rotateY(0deg) rotateZ(0deg);
-  }
-  
-  .cub div .front {
-    position: absolute;
-    left: 59px;
-    top: 46px;
-    width: 200px;
-    height: 200px;
-    background-color: rgba(51, 51, 51, 0.459);
-    box-shadow: inset 0px 0px 12px 2px rgb(0, 255, 38);
-    transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg) translateX(3px) translateY(0px) translateZ(99px);
-  }
-  
-    .cub div .back {
-    position: absolute;
-    left: 59px;
-    top: 46px;
-    width: 200px;
-    height: 200px;
-    background-color: rgba(51, 51, 51, 0.459);
-    box-shadow: inset 0px 0px 12px 2px rgb(0, 255, 38);
-    transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg) translateX(3px) translateY(0px) translateZ(-99px);
-  }
-  .circal{
+header{
+    position: fixed;
+    z-index: 500;
+    top: 5px;
+    width: 100%;
+    background-color: white;
+}    
+header.page__header .nav-item a{
+color: #0c4f69;
+}
+header #top-header{
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 140px 0.6fr;
+    align-items: center;
+    text-align: center;
+    font-size: 1.6em;
+}
+header #navbar__list{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+}
+header #navbar__list .off{
+    display: none;
+}
+header #navbar__list li a{
     position: relative;
-   }
-    .circal div{
+    text-decoration: none;
+    color: black;
+    border-color: transparent;
+    transition-duration: 0.3s;
+}
+
+header #navbar__list li a:hover , .about button:hover{
+    border: transparent solid 3px;
+    border-bottom-color: #0c6e65;
+    color: rgb(146, 116, 70);
+    color:#0c6e65;
+}
+header .menu__link#minue{
+    display: none;
+}
+
+header.page__header .nav-item a{
+    color: #0c4f69;
+    }
+.greenColor{
+    color: #0c6e65;
+}
+/*front*/
+.front{
+    margin: 108px 5% 94px 2%;
+    display: flex;
+    gap: 53px;
+    align-items: baseline;
+}
+/*main*/
+.about main,.front main{
+    padding-bottom: 48px;
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20210324/pngtree-abstract-memphis-playful-portfolio-pink-image_593418.jpg);
+    background-size: 100% 100%;
+    height: 530px;
+    width: 100%;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.front main .file{
+    font-size: 20px;
+}
+.front main .name {
+    font-size: 45px;
+    text-transform: capitalize;
+}
+.front main .name i{
+    color: #0c6e65;
+}
+.front main img.img1{
+    margin: 0 14% 0 0;
+    border-radius: 100px;
+    box-shadow: #b69292 0px 0px 15px 7px;
+}
+.connect img{
+    width: 30px;
+    border-radius: 40%;
+    margin: 9px 0
+}
+
+
+/*about*/
+.about{
+    padding-top: 120px;
+    margin: 15px 5% 128px 2%;
+    display: flex;
+    gap: 78px;
+    align-items: baseline;
+}
+/*main*/
+.about main {
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20210324/pngtree-pink-playful-abstract-portfolio-memphis-image_593407.jpg);
+    height: 618px;
+    gap: 51px;
+    padding: 15px 47px;
+}
+
+.about aside .up{
+    position: fixed;
+    border: black solid 2px;
+    background-color: white;
+    padding: 5px 9px;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+    bottom: 5%;
+    text-decoration: none;
+    color: black;
+}
+.about__contennt{
+height: 100%;
+}
+.about h1{
+    font-size: 40px;
+}
+.list {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr;
+}
+.about button {
+    cursor: pointer;
+    display: inline-block;
+    background-color: transparent;
+    font-size: 25px;
+    font-weight: bold;
+    border-color: transparent;
+    transition-duration: .5s;
+}
+#tow ,#three{
+    display: none;
+}
+#tow p,#three p,#one p{
+    text-transform:capitalize;
+}body {
+    height: 100vh;
+    background-color: black !important;
+    margin: 0; /* Remove default body margin */
+}
+.cub{
+margin-top: 50px;
+margin-left: -5px;
+position: relative; 
+height: 300px;
+width: 300px;
+perspective:900px;
+
+}
+.cub .iner{
+position: absolute;
+transform-style: preserve-3d;
+animation: cub-rotate 15s infinite linear;
+left: 50%;
+top: 110px;
+width: 54px;
+height: 289px;
+transform-origin: center;
+}
+
+.cub div .left{
+position: absolute;
+left: -38px;
+top: 46px;
+width: 200px;
+height: 200px;
+background-color: rgba(51, 51, 51, 0.459);
+box-shadow: inset 0px 0px 12px 2px rgb(0, 255, 38);
+transform: rotateX(0deg) rotateY(90deg)  rotateZ(0deg);
+
+}
+.cub div .top{
+position: absolute;
+left: 160px;
+top: 46px;
+width: 200px;
+height: 200px;
+background-color: rgba(51, 51, 51, 0.459);
+box-shadow: inset 0px 0px 12px 2px rgb(0, 255, 38);
+transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg);
+
+}
+.cub div .right{
+position: absolute;
+left: 160px;
+top: 46px;
+width: 200px;
+height: 200px;
+background-color: rgba(51, 51, 51, 0.459);
+box-shadow: inset 0px 0px 12px 2px rgb(0, 255, 38);
+transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg);
+
+}
+.cub div .button{
+position: absolute;
+left: 61px;
+top: 146px;
+width: 200px;
+height: 200px;
+background-color: rgba(51, 51, 51, 0.459);
+box-shadow: inset 0px 0px 12px 2px rgb(0, 255, 38);
+transform: rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.cub div .front {
+position: absolute;
+left: 60px;
+top: -61px;
+width: 200px;
+height: 200px;
+background-color: rgba(51, 51, 51, 0.459);
+box-shadow: inset 0px 0px 12px 2px rgb(0, 255, 38);
+transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg) translateX(3px) translateY(0px) translateZ(99px);
+}
+
+.cub div .back {
+position: absolute;
+left: 59px;
+top: 46px;
+width: 200px;
+height: 200px;
+background-color: rgba(51, 51, 51, 0.459);
+box-shadow: inset 0px 0px 12px 2px rgb(0, 255, 38);
+transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg) translateX(3px) translateY(0px) translateZ(-99px);
+}
+
+/* Circal (circles) container */
+.circal {
+    position: absolute; /* Changed to absolute to position relative to body */
+    width: 100%; /* Take full width of body */
+    height: 100vh; /* Take full height of body */
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Allow clicks to pass through the circles */
+    z-index: 0; /* Keep circles behind other content */
+}
+
+.circal div {
     border-radius: 50%;
+    /* Initial size - these will be set by JS for some circles */
     height: 20px;
     width: 20px;
-    background-color: aqua;
+    background-color: aqua; /* Default color, overridden by JS */
     box-shadow: 0px 2px 20px 3px rgb(0, 255, 38);
-    opacity: 0.6;
-    z-index: -1;
-   
-    }
-    .circal div:nth-child(1){
-       
-  background-color:blueviolet 5s;
-       
-  animation: circal1 10s linear  infinite;
-       
-  position: absolute;
-       
-  left: 3%;
-       
-  top:0px;
-    }
-    .circal div:nth-child(2){
-        background-color: aqua;
-        animation: circal2 9s linear  infinite 5s;
-        position: absolute;
-        left: 21%;
-        top:0px;
-        }
-     .circal div:nth-child(3){
-      animation: circal2 10s linear  infinite 5s;
-      position: absolute;
-      left: 90%;
-      top:0px;
-   }
-   .circal div:nth-child(4){
-     background-color: aqua;
-     animation: circal2 9s linear  infinite 5s;
-     position: absolute;
-     left: 80%;
-     top:0px;
-     }
-       .circal div:nth-child(5){
-        background-color: blueviolet;
-        animation: circal1 10s linear  infinite 5s;
-        position: absolute;
-        left: 85%;
-        top:0px;
-        }
-     .circal div:nth-child(6){
-        animation: circal1 9s linear  infinite 5s;
-        position: absolute;
-        background-color: blueviolet;
-        left: 30%;
-        top:0px;
-        }
-  .circal div:nth-child(7){
-    width: 40px;
-    height: 40px;
-    animation: circal2 10s linear  infinite;
-    position: absolute;
-    left: 7%;
-    top:0px;
-    opacity: .9;
-    }
-  .circal div:nth-child(8){
-    width: 40px;
-    height: 40px;
-    animation: circal3 10s linear  infinite;
-    position: absolute;
-    left: 23%;
-    top:0px;
-    opacity: .9;
-    }
-  .circal div:nth-child(9){
-    width: 40px;
-    height: 40px;
-    animation: circal2 10s linear  infinite;
-    position: absolute;
+    opacity: 0.6; /* Default opacity, overridden by JS */
+    position: absolute; /* Essential for top/left positioning */
+    z-index: -1; /* Default z-index, overridden by JS for some */
+    /* Transition for smoother JS position updates if desired, not strictly needed for direct manipulation */
+    /* transition: top linear; */
+}
+
+/* The following nth-child rules for circal div animations are now commented out
+   because their 'top' animation will be handled by JavaScript.
+   However, properties like size, initial position (left), opacity, and color
+   can still be set here, or entirely by JS as done in the provided JS example.
+   I've put basic values here, but the JS will override them. */
+
+.circal div:nth-child(1) {
+    background-color: blueviolet;
+    left: 3%;
+    /* animation: circal1 10s linear infinite; */
+}
+.circal div:nth-child(2) {
+    background-color: aqua;
+    left: 21%;
+    /* animation: circal2 9s linear infinite 5s; */
+}
+.circal div:nth-child(3) {
+    /* No specific background-color here, relying on default aqua or JS */
+    left: 90%;
+    /* animation: circal2 10s linear infinite 5s; */
+}
+.circal div:nth-child(4) {
+    background-color: aqua;
     left: 80%;
-    top:0px;
-    opacity: .9;
-    }  
-  .circal div:nth-child(10){
+    /* animation: circal2 9s linear infinite 5s; */
+}
+.circal div:nth-child(5) {
+    background-color: blueviolet;
+    left: 85%;
+    /* animation: circal1 10s linear infinite 5s; */
+}
+.circal div:nth-child(6) {
+    background-color: blueviolet;
+    left: 30%;
+    /* animation: circal1 9s linear infinite 5s; */
+}
+.circal div:nth-child(7) {
     width: 40px;
     height: 40px;
-    animation: circal3 10s linear  infinite;
-    position: absolute;
+    opacity: 0.9;
+    left: 7%;
+    /* animation: circal2 10s linear infinite; */
+}
+.circal div:nth-child(8) {
+    width: 40px;
+    height: 40px;
+    opacity: 0.9;
+    left: 23%;
+    /* animation: circal3 10s linear infinite; */
+}
+.circal div:nth-child(9) {
+    width: 40px;
+    height: 40px;
+    opacity: 0.9;
+    left: 80%;
+    /* animation: circal2 10s linear infinite; */
+}
+.circal div:nth-child(10) {
+    width: 40px;
+    height: 40px;
+    opacity: 0.9;
     left: 94%;
-    top:0px;
-    opacity: .9;
+    /* animation: circal3 10s linear infinite; */
+}
+.circal div:nth-child(11) {
+    background-color: blueviolet;
+    left: 35%;
+    /* animation: circal4 9s linear infinite; */
+}
+.circal div:nth-child(12) {
+    background-color: rgb(43, 220, 226);
+    left: 56%;
+    /* animation: circal5 9s linear infinite; */
+}
+.circal div:nth-child(13) {
+    background-color: blueviolet;
+    left: 89%;
+    width: 40px;
+    height: 40px;
+    /* animation: circal4 9s linear infinite; */
+}
+.circal div:nth-child(14) {
+    background-color: rgb(43, 211, 226);
+    left: 14%;
+    /* animation: circal5 9s linear infinite; */
+}
+.circal div:nth-child(15) {
+    background-color: blueviolet;
+    left: 72%;
+    /* animation: circal4 9s linear infinite; */
+}
+.circal div:nth-child(16) {
+    background-color: rgb(43, 214, 226);
+    left: 70%;
+    /* animation: circal5 9s linear infinite; */
+}
+
+
+/* Cube Rotation - keep if cube rotates independently of circles */
+@keyframes cub-rotate {
+    0% {
+        transform: rotateY(0deg);
     }
-  
-   .circal div:nth-child(11){
-        animation: circal4 9s linear  infinite;
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+.write {
+    width: 400px;
+    height: 82px;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(234, 234, 222);
+    text-align: center;
+    font-size: large;
+    font-weight: bolder;
+    font-style: normal;
+    text-transform: capitalize;
+    display: flex;
+    position: relative;
+    top: 186px;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    border-width: 5px;
+    border-style: double;
+    border-color: transparent;
+    background-image: linear-gradient(black, black) , linear-gradient(90deg, darkblue, darkorchid);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    padding-left: 5px;
+    padding-top: 0px;
+    box-sizing: border-box;
+    border-top-right-radius: 70em;
+    border-bottom-left-radius: 70em;
+    animation: scal 5.2s linear infinite;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* Bring text to front */
+}
+
+@keyframes scal {
+    0% {
+        transform: scale(1.0) translateX(-50%); /* Apply scale and re-center */
+    }
+    50% {
+        transform: scale(1.05) translateX(-50%); /* Slight scale up */
+    }
+    100% {
+        transform: scale(1.0) translateX(-50%); /* Back to original scale */
+    }
+}
+
+nav {
+    font-style: italic;
+    font-family: ui-sans-serif;
+    position: absolute;
+    left: 0;
+    top: 43px;
+    display: flex;
+    gap: 6%;
+    margin-left: 23px;
+    width: 95%;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-transform: capitalize;
+    flex-wrap: wrap;
+    z-index: 10; /* Bring navigation to front */
+}
+
+nav a {
+    color: aliceblue;
+    text-decoration: none;
+    display: flex; /* Make anchor a flex container for img/text alignment */
+    align-items: center; /* Vertically align items */
+    position: relative; /* For absolute positioning of images inside */
+}
+
+/* Adjust image positioning relative to their parent 'a' element */
+nav a:nth-child(1) img {
+    position: static; /* Let it flow normally */
+    margin-right: 5px; /* Space between img and text */
+    width: 20px;
+    height: 20px;
+}
+nav a:nth-child(2) img {
+    position: static;
+    margin-right: 5px;
+    width: 25px;
+    height: 23px;
+}
+nav a:nth-child(3) img {
+    position: static;
+    margin-right: 5px;
+    width: 25px;
+    height: 23px;
+}
+/* Re-evaluating nth-child(4) and (5) based on your HTML, they don't have images in the HTML snippet */
+/* If these are just text links, the previous static positioning is fine.
+   If you intend for them to have images, ensure the HTML structure matches. */
+/* Assuming for now they are just text links: */
+nav a:nth-child(4) {
+    /* No special img positioning needed if no img tag within it */
+}
+nav a:nth-child(5) p { /* Assuming p is the content inside link 5 */
+    position: static; /* Let it flow normally */
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.alam {
+    background-image: linear-gradient(to bottom, black, black 34%, white 34%, white 70%, green 70%, green);
+    border: 1px solid blue;
+    width: 40px;
+    height: 30px;
+    position: relative; /* Changed to relative for simpler left/top, or absolute to body */
+    top: -387px; /* Adjust as needed */
+    left: 93%;
+    z-index: 10; /* Bring flag to front */
+}
+
+.alam::after {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 16px;
+    border-color: transparent transparent transparent red;
+}
+
+@media (max-width: 700px) {
+    .cub div .front {
         position: absolute;
-        background-color: blueviolet;
-        left: 35%;
-        top: 102px;
-        width: 40px;
-        height: 40px;
-        }
-    .circal div:nth-child(12){
-        animation: circal5 9s linear  infinite;
-        position: absolute;
-        background-color: rgb(43, 220, 226);
-        left: 56%;
-        top:0px;
-        }  
-    .circal div:nth-child(13){
-        animation: circal4 9s linear  infinite;
-        position: absolute;
-        background-color: blueviolet;
-        left: 89%;
-        top: 7%;
-        width: 40px;
-        height: 40px;
-        }
-    .circal div:nth-child(14){
-        animation: circal5 9s linear  infinite;
-        position: absolute;
-        background-color: rgb(43, 211, 226);
-        left: 14%;
-        top: 84px;
-        }   
-   .circal div:nth-child(15){
-        animation: circal4 9s linear  infinite;
-        position: absolute;
-        background-color: blueviolet;
-        left: 72%;
-        top:0px;
-        }
-   .circal div:nth-child(16){
-        animation: circal5 9s linear  infinite;
-        position: absolute;
-        background-color: rgb(43, 214, 226);
-        left: 70%;
-        top: 17px;
-        }                         
-      @keyframes cub-rotate {
-        0%{
-            transform-origin:center;
-          transform:rotateY(0deg);
-        } 
-        100%{
-            transform-origin:center;
-          transform: rotateY(360deg);
-        } 
-      }
-      @keyframes circal1 {
-        0% {display: block;
-            
-            top: -60px;
-        }
-        100% {
-             display: block;
-            top: 658px;
-        }
-      }
-      @keyframes circal2 {
-        0% {
-            display: block;
-            top: 60px;
-        }
-        100% {
-            display: block;
-            top: 658px;
-        }
-      }
-      @keyframes circal3 {
-        0% {
-            display: block;
-            top: -1px;
-        }
-        100%{
-            top: 658px;
-        }
-      
-      }
-      @keyframes circal4 {
-        0% {
-            display: block;
-            top: 100px;
-        }
-        100% { display: block;
-           
-            top: 658px;
-        }
-      }
-      @keyframes circal5 {
-        0% {
-            display: block;
-            top: 400px;
-        }
-        100% { display: block;
-            
-            top: 658px;
-        }
-      }
-      .write{
-        width: 400px;
-        height: 82px;
-        font-family: 'Roboto', sans-serif;
-        color: rgb(234, 234, 222);
-        text-align: center;
-        font-size: large;
-        font-weight: bolder;
-        font-style: normal;
-        text-transform: capitalize;
-        display: flex;
-        position: relative;
-        top: 186px;
-        left: 31%;
-        border-width: 5px;
-        border-style: double;
-        border-color: transparent;
-        background-image: linear-gradient( black,black) , linear-gradient(90deg, darkblue, darkorchid);
-        background-origin: border-box;
-        background-clip: content-box,border-box;
-        padding-left: 5px;
-        padding-top: 0px;
-        box-sizing: border-box;
-        border-top-right-radius: 70em;
-        border-bottom-left-radius:70em;
-        animation: scal 5.2s linear infinite;
-        justify-content: center;
-        align-items: center;
-      }
-      @keyframes scal {
-        0%{
-            transform: scale(1.1);
-        }
-        100%{
-            transform: scal(3);
-        }
-        
-      }
-      nav{
-        font-style: italic;
-        font-family: ui-sans-serif;
-        position: absolute;
-        left: 0;
-        top: 43px;
-        display: flex;
-        gap: 6%;
-        margin-left: 23px;
-        width: 95%;
-        flex-direction: row;
-        justify-content: flex-start;
-        text-transform: capitalize;
-        flex-wrap: wrap;
-      }
-      nav a{
-        color: aliceblue;
-        text-decoration: none;
-      }
-      nav a:nth-child(1) img{
-        position: absolute;
-        left: 48px;
-        top: -2px;
-        width: 20px;
-        height: 20px;
-      }
-      nav a:nth-child(2) img{
-        position: absolute;
-        left: 72px;
-        top: -2px;
-        width: 25px;
-        height: 23px;
-      }
-      nav a:nth-child(3) img{
-        position: absolute;
-        left:44px;
-        top: -2px;
-        width: 25px;
-        height: 23px;
-      }
-      nav a:nth-child(4){
-        /* position: absolute; */
-        left: 466px;
-        top: 36px;
-      }
-      nav a:nth-child(4) img{
-        position: absolute;
-        left: 29px;
-    top: -18px;
-        width: 50px;
-        height: 50px;
-      }
-      nav a:nth-child(5) p{
-        position: absolute;
-        left: 31px;
-        top: -14px;
-        width: 50px;
-        height: 50px;
-      }
-      nav a:hover{
-       text-decoration: underline;
-      }
-      .alam{
-        background-image: linear-gradient(to bottom,black,black 34%,white 34%,white 70%,green 70%,green);
-        border:1px solid blue;
-        width: 40px;
-        height: 30px;
-        position: relative;
-        top: -387px;
-        left: 93%;
-      }
-      .alam::after{
-        position: absolute;
-        left: 0px;
-        top: 0px;
-        content: "";
-        width: 0px;
-        height: 0px;
-        border-style:solid;
-        border-width: 16px;
-        border-color: transparent transparent transparent red;
-      }
-      @media (max-width: 700px) {
-        .write{
+        left: 50px;
+        top: -35px;
+    }
+    .write {
         width: 50%;
-        }
-        .alam {
+        left: 50%; /* Re-center */
+        transform: translateX(-50%); /* Re-center */
+    }
+    .alam {
         top: -425px;
         left: 88%;
-        }
     }
-    @media (max-width: 500px) {
-        .write{
+    nav {
+        gap: 3%; /* Reduce gap for smaller screens */
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .write {
         width: 80%;
-        left:9%;
-        font-size:15px;
-        }
+        left: 50%; /* Re-center */
+        transform: translateX(-50%); /* Re-center */
+        font-size: 15px;
+        height: auto; /* Allow height to adjust based on content */
+        padding: 10px; /* Add some padding */
     }
+    nav {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: flex-start; /* Align stacked items to the left */
+        margin-left: 10px;
+        top: 10px; /* Adjust top position for better layout */
+        gap: 5px; /* Smaller gap when stacked */
+    }
+    nav a {
+        padding: 5px 0; /* Add some vertical padding to links */
+    }
+    .alam {
+        top: -20px; /* Adjust flag position for very small screens */
+        left: auto; /* Remove fixed left */
+        right: 10px; /* Position from right */
+    }
+}
+.about__contennt .shorts{
+    margin-top: 58px;
+}
+.about video{
+    margin: 10%;
+    border-radius: 5px;
+    box-shadow: #b69292 20px 14px 15px 7px;
+}
+
+/*service*/
+.services,.project{
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20210324/pngtree-playful-pink-memphis-abstract-portfolio-image_593408.jpg);
+    background-size: 100% 100%;
+    display: grid;
+    grid-template-rows: 123px 1fr 110px;
+    align-items: center;
+    height: 630px;
+    margin: 5px 5% 75px 113px;
+    border-radius: 30px;
+    gap: 22px;
+}
+.services main{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 200px 196px;
+    align-items: start;
+    padding: 0px;
+    gap: 49px;
+}
+.services div a ,.project div a{
+    position: relative;
+    text-decoration: none;
+    color: black;
+}
+.services div a:hover::before , .services div a:hover::after{
+    content: "I can create integrated projects using front-end technologies. To see examples, click";
+    background-image: linear-gradient( white ,30%,#b69292);
+    padding: 10%;
+    width: 82%;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    top: -10px;
+    z-index: 2;
+    text-align: center;
+    transition-delay:2s ;
+    font-size: 22px;
+    box-shadow: #b69292 0px 0px 15px 7px;
+}
+.services div:nth-child(2) a:hover::before , .services div a:hover::after{
+    content: "I used the Java language and some structures to create pages and solve some problems. Click";
+}
+.services div:nth-child(3) a:hover::before , .services div a:hover::after{
+    content: "Some modern and traditional designs can be made with a touch of artistic creativity. This can be seen through the projects that I present. Click";
+}
+.services div:nth-child(3) a:hover::after{
+    top:80%;
+}
+.services div a:hover::after{
+    content: "";
+    background-image: url(../photo/external-link.png);
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    z-index: 2;
+    transition-delay: 2s;
+    background-size: 100%;
+    padding: 0px;
+}
+.services div a img {
+    width: 50px;
+    height: 46px;
+    padding: 0 5px;
+}
+
+/*project*/
+.project main {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    align-items: center;
+    padding: 0px;
+    gap: 6%;
+}
+#services,#project ,#resume{
+    margin: 106px;
+    height: 5px;
+}
+.project{
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20210324/pngtree-portfolio-memphis-playful-abstract-pink-image_593412.jpg);
+}   
+.project h1 , .services h1{
+    margin: -50px 10% -68px 18%;
+    font-size: 45px;
+    width: 72%;
+}
+.project main div a , .services main div a{
+    font-size: 32px;
+    display: inline-block;
+    height: 151px;
+    padding-top: 48px;
+    padding-left: 14%;
+    cursor: pointer;
+    width: 75%;
+    background-color: #e6a9a9;
+}
+
+.project main div a:hover{
+    background-color: #f4d1d1;
+    box-shadow: #b69292 0px 0px 15px 7px;
+
+}
+.project main div{    
+    width: 100%;
+}
+main{
+    margin-top: 257px;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+main a {
+  gap:20px;
+  text-decoration: none;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Add a smooth transition for the transform property */
+  transition: transform 0.3s ease-out; /* This makes the movement smooth */
+}
+
+main a:hover {
+  transform: translateY(-5px); /* Moves the element up by 5 pixels when hovered */
+}
+main div img{
+  border-radius: 50px;
+}
+/*resume*/
+.resume main{
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20210324/pngtree-abstract-pink-memphis-playful-portfolio-image_593421.jpg);
+    background-size: 100% 100%;
+    background-position: 151% 50%;
+    display: flex;
+    height: 421px;
+    margin: 5px 5% 145px 113px;
+    border-radius: 30px;
+    gap: 9%;
+    justify-content: flex-start;
+    align-items: center;
+}
+.resume main img{
+    border-radius: 99px;
+    margin: 0 16%;
+}
+
+footer{
+    display: flex;
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20210324/pngtree-portfolio-playful-abstract-pink-memphis-image_593409.jpg);
+    background-size: 100% 390%;
+    height: 171px;
+    margin-top: 40px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer h1 {
+    font-size: 25px;
+}
+footer img{
+    border-radius: 50px;
+    box-shadow: #b69292 0px 0px 15px 7px;
+
+
+}
+
+@media (max-width:1700px){
+.services main div a:hover::before{
+height: 60%;
+}
+.services main div a:hover::after{ 
+top: 70%;
+}
+}
+@media (max-width:1200px){
+    
+    header #navbar__list {
+        gap: 33px;
+    }
+    .about main {
+        gap:0px;
+    }
+}
+
+@media (max-width:1200px){
+    .services main div a:hover::before{
+        height: 65%;
+        } 
+}
+@media (max-width:1130px){
+    .services main div a:hover::before{
+        height: 70%;
+        } 
+    .about main {
+        padding: 15px 0px;
+    }
+}
+@media (max-width:1020px){
+    .about video {
+        margin: 8%;
+    }
+}
+@media (max-width:990px){
+    .services main div a:hover::before {
+        height: 79%;
+    }
+    .about video {
+        margin: 7%;
+    }
+    .services main div:nth-child(3) a:hover::before {
+        font-size: 19px;
+    }
+}
+@media (max-width:970px){
+    .about video {
+        margin: 8%;
+        width: 39%;
+        height: 48%;
+    }
+}
+
+@media (max-width:900px){
+    .about video {
+        margin: 7%;
+        width: 39%;
+        height: 48%;
+    }
+}
+
+@media (max-width:800px){
+    .services main div a:hover::after{ 
+        top: 75%;
+        }
+    .front {
+        gap: 4%;
+    }
+    .about main {
+        background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20210324/pngtree-abstract-memphis-playful-portfolio-pink-image_593418.jpg);
+        background-size: 109% 100%;
+        display: grid;
+        grid-template-rows: auto 1fr;
+        height:900px;
+        justify-items: center;
+        padding: 20px;
+    }
+    .front main {
+        padding: 0 33px;
+     }
+  .about video {
+    width: 172px;
+    height: 297px;
+    }
+    .resume main img {
+        margin: 0 11%;
+    }
+    .about__contennt {
+        background-color: #ffc3c3;
+        padding: 0 12px;
+    }
+}  
+@media (max-width:750px){
+    .services main div a:hover::before {
+        height: 86%;
+        font-size: 19px;
+    }
+    header #navbar__list {
+        gap: 19px;
+    }
+    .about main, .front main {
+        padding-left: 26px;
+    }
+}
+
+
+@media (max-width:700px){
+    
+    header #navbar__list {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        flex-direction: column;
+        align-items: stretch;
+        margin: 17px 45px 5px -39px;
+        background-color: white;
+        padding: 0 23px;
+    }
+    header .menu__link#minue{
+        display: block;
+    }
+    header #top-header {
+        align-items: start;
+        height: 89px;
+        grid-template-columns: 1.5fr 0.8fr;
+    }
+    .front {
+        gap:0px;
+        flex-direction: column;
+        margin: 80px 5% 94px 16%;
+    }
+    .connect{
+        display: flex;
+        align-items: center;
+    }
+    .connect li{
+    margin-right: 32%;
+    }
+    .services main div a {
+        height: 193px;
+        padding-top: 6px;
+    }
+    .front main {
+        width: 83%;
+    }
+    header #navbar__list .off {
+        display: block;
+        color: white;
+        background-color: black;
+        padding: 10px 0;
+    }
+}
+
+@media (max-width:650px){
+    .services, .project {
+        height: auto;
+        background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20210324/pngtree-portfolio-memphis-playful-abstract-pink-image_593412.jpg);
+    }
+    .services main div a:hover::before {
+        height: 141px;
+        width: 80%;
+    }
+    .services div:nth-child(3) a:hover::after {
+        top: 71%;
+    }
+    .project main div a, .services main div a {
+        font-size: 23px;
+    }
+    .resume main img {
+        margin: 0 1%;
+    }
+    .connect li {
+        margin-right: 23%;
+    }
+    .about{
+        width: 72%;
+    }
+    .about main {
+        height: 923px;
+    }
+    .about__contennt {
+        margin: 0px 0 0 -23px;
+        width: 96%;
+        padding: 0 13px;
+    }
+    .project main {
+        grid-template-columns: repeat(1, 1fr);
+        padding-left:26px;
+    }
+    .services main div a {
+        height: 1fr;
+        width: 84%;
+        padding-top: 25px;
+    }
+    .services main {
+        grid-template-columns:1fr;
+    }
+    
+}
+
+@media (max-width:600px){   
+    .about {
+    gap: 17%;
+    }
+    .services main div a:hover::before {
+        height: 80%;
+    }
+    .about__contennt {
+        margin: 1px 0 0 -23%;
+        width: 74%;
+        padding: 0 13px;
+    }
+}
+
+@media (max-width:420px){   
+.connect {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.front aside{
+    width: 100%;
+}
+.front main .name {
+    font-size: 23px;
+}
+.front main {
+    flex-direction: column;
+}
+.about {
+    width: 98%;
+    display: block;
+}
+.about main {
+    width: 72%;
+    margin-left: 12%;
+    justify-content: center;
+    height: auto;
+}
+.about__contennt {
+    margin: 1px 0 0 -3%;
+    width: 87%;
+}
+.list {
+    display: grid;
+    margin: 35px 0;
+}
+.about button {
+    font-size: 17px;
+}
+.about__contennt .shorts {
+    margin: 68px 0;
+}
+.services, .project {
+    margin: 5px 5% 75px 53px;
+}
+.resume main {
+    flex-direction: column;
+    margin: 5px 5% 145px 50px;
+}
+}
