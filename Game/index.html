@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <title>🏂 لعبة Git/GitHub التعليمية</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game">
+    <div id="question">جارٍ تحميل السؤال...</div>
+    <div id="result"></div>
+    <div id="score">النقاط: 0</div>
+    <div id="gameOver">
+      <div id="gameOverText">❌ انتهت اللعبة!</div>
+      <button id="restartBtn">ابدأ من جديد</button>
+      <div id="playerNameGameOver"></div>
+    </div>
+    <div id="winMessage">
+      🎉 مبروك! انتهت كل الأسئلة!<br />
+      <span id="playerNameWin"></span><br />
+      <button id="screenshotBtn">📷 لقطة شاشة</button>
+    </div>
+    <div id="nameInputContainer">
+      أدخل اسمك للبدء:
+      <input type="text" id="playerNameInput" placeholder="اكتب اسمك هنا" />
+      <button id="startBtn" disabled>ابدأ اللعبة</button>
+    </div>
+    <div id="player"></div>
+    <div id="options-container"></div>
+  </div>
+
+  <!-- مكتبة html2canvas لحفظ لقطة -->
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
