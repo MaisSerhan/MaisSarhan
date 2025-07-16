@@ -1,0 +1,86 @@
+:root {
+  --bg-main: #FAF7F3;
+  --bg-page: #F0E4D3;
+  --page-border: #DCC5B2;
+  --accent: #D9A299;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page.hard {
+  background-image: url('../../../static/photo/CreateLinkedin.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  background-size: 325px 452px; /* عرض 300 بكسل وارتفاع 200 بكسل */
+  
+  width: 600px;  /* عرض الـ div */
+  height: 400px; /* ارتفاع الـ div */
+  
+  border: 3px solid #333;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+
+
+
+h1 {
+  color: var(--accent);
+  margin-top: 20px;
+}
+
+#flipbook {
+  width: 90%;
+  max-width: 800px;
+  height: 500px;
+  margin-top: 50px;
+}
+
+.page {
+  background: var(--bg-page);
+  padding: 20px;
+  font-size: 18px;
+  direction: rtl;
+  box-sizing: border-box;
+  border: 2px solid var(--page-border);
+  border-radius: 10px;
+  color: #333;
+}
+
+.hard {
+  background: var(--accent);
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 200px;
+  border: none;
+}
+
+.navigation {
+  margin: 20px;
+}
+
+.navigation button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 0 10px;
+  cursor: pointer;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.navigation button:hover {
+  background-color: #c07f6f;
+}
