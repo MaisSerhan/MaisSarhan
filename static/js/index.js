@@ -6,7 +6,7 @@ const navbar= ()=>{
     close.innerHTML="X";
     close.setAttribute("onclick",`show("#navbar__list")`);
     close.classList.add("off");
-    for(let i=1;i<6;i++){
+    for(let i=1;i<7;i++){
     let n=`Section ${i}`;
     let c=`section${i}`;
     let a =`<a class="menu__link" id="${c}" href="#${c}" "></a>`;
@@ -44,6 +44,9 @@ const navbar= ()=>{
           </ul>`; 
     a.setAttribute("href","#project");
     a =document.querySelector("#section5");
+    a.innerHTML = "Posts"; 
+    a.setAttribute("href","./Posts/post.html");
+    a =document.querySelector("#section6");
     a.innerHTML = "Resume"; 
     a.setAttribute("href","#resume");
     ul.appendChild(close); 
