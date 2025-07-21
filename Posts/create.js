@@ -1,12 +1,9 @@
-const flipbook = new St.PageFlip(document.getElementById("flipbook"), {
-  width: 400,
-  height: 500,
-  size: "fixed",
-  maxShadowOpacity: 0.7,
-  showCover: true,
-  flippingTime: 800,
-  usePortrait: true,
-  mobileScrollSupport: false
-});
+function filterPosts() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const items = document.querySelectorAll("#postList a");
 
-flipbook.loadFromHTML(document.querySelectorAll(".page"));
+  items.forEach(item => {
+    const text = item.textContent.toLowerCase();
+    item.style.display = text.includes(input) ? "block" : "none";
+  });
+}
