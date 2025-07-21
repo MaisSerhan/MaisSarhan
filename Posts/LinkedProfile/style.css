@@ -1,0 +1,185 @@
+/* static/style.css */
+
+:root {
+    --bg-main: #FAF7F3; /* Light beige/off-white */
+    --bg-page: #F0E4D3; /* Slightly darker beige for pages */
+    --page-border: #DCC5B2; /* Muted brown for page borders */
+    --accent: #D9A299; /* A soft, warm accent color (original) */
+    --accent-dark: #C07F6F; /* Darker shade for hover/active */
+    --text-color: #333; /* Dark gray for general text */
+    --link-color: #007bff; /* Blue for links */
+    --link-hover-color: #0056b3; /* Darker blue for link hover */
+
+    /* New colors for subtle variations */
+    --soft-blue: #E0F2F7; /* Light blue for subtle accents */
+    --soft-green: #E6F3EA; /* Light green for subtle accents */
+    --soft-purple: #F0E6F0; /* Light purple for subtle accents */
+}
+
+/* Keyframe for a subtle pulse effect (for elements like h1) */
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.02); opacity: 0.95; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Keyframe for a subtle background glow */
+@keyframes glow {
+    0% { box-shadow: 0 0 5px rgba(217, 162, 153, 0.5); }
+    50% { box-shadow: 0 0 15px rgba(217, 162, 153, 0.8); }
+    100% { box-shadow: 0 0 5px rgba(217, 162, 153, 0.5); }
+}
+
+/* ⭐ إضافة ارتفاع كامل لـ html و body لضمان تغطية الخلفية وثباتها ⭐ */
+html, body {
+    height: 100%; /* تأكد أن الـ html والـ body يمتدان لارتفاع الشاشة بالكامل */
+    width: 100%;  /* تأكد أن الـ html والـ body يمتدان لعرض الشاشة بالكامل */
+    overflow-x: hidden; /* ⭐ منع أي تجاوز أفقي يمكن أن يسبب شريط تمرير أفقي أو تمدد ⭐ */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-main);
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* التأكد من أن body يأخذ ارتفاع الشاشة بالكامل */
+
+    /* ⭐ خصائص الخلفية ⭐ */
+    background-image: url('./photo/linkedin_logo.png'); /* أو briefcase_icon.png */
+    background-repeat: repeat; /* تكرار الأيقونة */
+    background-size: 40px 40px; /* حجم ثابت بالبكسل لكل أيقونة */
+    background-attachment: fixed; /* لتثبيت الخلفية عند التمرير */
+    background-position: center center; /* لضمان بدء التكرار من المنتصف */
+}
+
+
+/* نمط الغلاف الصلب (الخلفي والأمامي) */
+.page.hard {
+    background-image: url('../../../static/photo/CreateLinkedin.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 83% 93%;
+    width: 98%;
+    height: 100%;
+    border: 3px solid #333;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: var(--accent);
+    text-indent: -9999px;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Subtle hover effect for hard covers */
+.page.hard:hover {
+    transform: scale(1.01);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.page.start {
+    /* PageFlip.js controls the centering for the initial cover page when showCover: true */
+}
+
+h1 {
+    color: var(--accent);
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    animation: pulse 2s infinite ease-in-out;
+}
+
+#flipbook {
+    width: 90%;
+    max-width: 800px;
+    height: 500px;
+    margin-top: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    overflow: hidden;
+    animation: glow 3s infinite alternate;
+}
+
+.page {
+    background: var(--bg-page);
+    padding: 20px;
+    font-size: 1.1em;
+    direction: rtl;
+    box-sizing: border-box;
+    border: 2px solid var(--page-border);
+    border-radius: 10px;
+    color: var(--text-color);
+    overflow-y: auto;
+    background-color: var(--bg-page);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.page:nth-child(even):not(.hard) {
+    background-color: var(--soft-blue);
+}
+
+.page:nth-child(odd):not(.hard) {
+    background-color: var(--soft-green);
+}
+
+.navigation {
+    margin: 30px 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navigation button {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navigation button:hover {
+    background-color: var(--accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.navigation button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* أنماط الروابط داخل الفهرس */
+.page ul {
+    list-style: none;
+    padding: 0;
+}
+
+.page ul li {
+    margin-bottom: 12px;
+    transition: transform 0.2s ease-out;
+}
+
+.page ul li:hover {
+    transform: translateX(-5px);
+}
+
+.page ul li a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
+}
+
+.page ul li a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
