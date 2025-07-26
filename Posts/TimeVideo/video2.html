@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>تشغيل جزء من فيديو يوتيوب</title>
+  <link rel="icon" href="https://github.com/MaisSerhan/MaisSarhan/blob/main/static/photo/shorticons.png?raw=true" type="image/png" />
+
+  <!-- ربط Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      background-color: #f0f0f0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    #player {
+      margin-top: 20px;
+      width: 100%;
+      max-width: 640px;
+      aspect-ratio: 16 / 9; /* يحافظ على نسبة عرض الفيديو */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container bg-white p-4 rounded shadow" style="max-width: 720px;">
+    <h2 class="text-center mb-4">تشغيل جزء من فيديو يوتيوب</h2>
+
+    <div class="mb-3">
+      <input type="text" id="youtubeUrl" class="form-control" placeholder="رابط فيديو YouTube" />
+    </div>
+
+    <div class="row g-3 mb-3">
+      <div class="col-12 col-md-6">
+        <input type="text" id="startTime" class="form-control" placeholder="وقت البداية (مثال: 00:01:30)" />
+      </div>
+      <div class="col-12 col-md-6">
+        <input type="text" id="endTime" class="form-control" placeholder="وقت النهاية (مثال: 00:02:15)" />
+      </div>
+    </div>
+
+    <div class="d-flex gap-2 mb-3 justify-content-center flex-wrap">
+      <button id="playBtn" onclick="loadYouTubeVideo()" class="btn btn-primary btn-lg flex-grow-1">تشغيل المقطع</button>
+      <button id="repeatBtn" class="btn btn-outline-secondary btn-lg flex-grow-1" onclick="toggleRepeat()">تكرار المقطع</button>
+    </div>
+
+    <div id="player"></div>
+  </div>
+
+  <!-- تحميل YouTube IFrame API -->
+  <script src="https://www.youtube.com/iframe_api"></script>
+
+  <script>
+    let player;
+    let stopTime = 0;
+    let startTime = 0;
+    let isRepeating = false;
+    let checkTimeout;
+
+    function timeToSeconds(timeStr) {
+      const parts = timeStr.split(':').map(Number);
+      if (parts.length === 3) {
+        return parts[0] * 3600 + parts[1] * 60 + parts[2];
+      } else if (parts.length === 2) {
+        return parts[0] * 60 + parts[1];
+      } else if (parts.length === 1) {
+        return Number(parts[0]);
+      }
+      return 0;
+    }
+
+    function extractVideoId(url) {
+      const regex = /(?:youtube\.com\/.*v=|youtu\.be\/)([^&?/]+)/;
+      const match = url.match(regex);
+      return match ? match[1] : null;
+    }
+
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        height: '390',
+        width: '640',
+        videoId: '',
+        playerVars: {
+          autoplay: 0,
+          controls: 1
+        },
+        events: {
+          onReady: () => {},
+          onStateChange: onPlayerStateChange
+        }
+      });
+    }
+
+    function onPlayerStateChange(event) {
+      if (event.data === YT.PlayerState.PLAYING) {
+        clearTimeout(checkTimeout);
+        checkVideoTime();
+      }
+    }
+
+    function checkVideoTime() {
+      const currentTime = player.getCurrentTime();
+
+      if (isRepeating) {
+        if (currentTime >= stopTime) {
+          player.seekTo(startTime);
+        }
+        checkTimeout = setTimeout(checkVideoTime, 200);
+      } else {
+        if (currentTime >= stopTime) {
+          player.pauseVideo();
+        } else {
+          checkTimeout = setTimeout(checkVideoTime, 200);
+        }
+      }
+    }
+
+    function loadYouTubeVideo() {
+      const url = document.getElementById("youtubeUrl").value.trim();
+      startTime = timeToSeconds(document.getElementById("startTime").value.trim());
+      stopTime = timeToSeconds(document.getElementById("endTime").value.trim());
+      const videoId = extractVideoId(url);
+
+      if (!videoId || isNaN(startTime) || isNaN(stopTime) || startTime >= stopTime) {
+        alert("يرجى إدخال رابط يوتيوب صحيح ووقت بداية ونهاية بصيغة صحيحة");
+        return;
+      }
+
+      player.loadVideoById({
+        videoId: videoId,
+        startSeconds: startTime,
+        endSeconds: stopTime
+      });
+    }
+
+    function toggleRepeat() {
+      isRepeating = !isRepeating;
+      const btn = document.getElementById("repeatBtn");
+      btn.textContent = isRepeating ? "إيقاف التكرار" : "تكرار المقطع";
+      if (player && player.getPlayerState() === YT.PlayerState.PLAYING) {
+        clearTimeout(checkTimeout);
+        checkVideoTime();
+      }
+    }
+  </script>
+
+</body>
+</html>
