@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>تشغيل جزء من فيديو يوتيوب</title>
+  <link rel="icon" href="https://github.com/MaisSerhan/MaisSarhan/blob/main/static/photo/shorticons.png?raw=true" type="image/png" />
+
+  <style>
+    html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* توسيط عمودي */
+  align-items: center;     /* توسيط أفقي */
+}
+input, button {
+  margin: 10px;
+  padding: 10px;
+  font-size: 16px;
+  width: 260px;
+  direction: ltr;
+}
+#player {
+  margin-top: 20px;
+  width: 640px;
+  height: 390px;
+}
+
+  </style>
+</head>
+<body>
+
+  <h2>تشغيل جزء من فيديو يوتيوب</h2>
+
+  <input type="text" id="youtubeUrl" placeholder="رابط فيديو YouTube">
+  <br>
+  <input type="text" id="startTime" placeholder="وقت البداية (مثال: 00:01:30)">
+  <input type="text" id="endTime" placeholder="وقت النهاية (مثال: 00:02:15)">
+  <br>
+  <button onclick="loadYouTubeVideo()">تشغيل المقطع</button>
+
+  <div id="player"></div>
+
+  <!-- تحميل YouTube IFrame API -->
+  <script src="https://www.youtube.com/iframe_api"></script>
+
+  <script>
+    let player;
+    let stopTime = 0;
+
+    function timeToSeconds(timeStr) {
+      const parts = timeStr.split(':').map(Number);
+      if (parts.length === 3) {
+        return parts[0] * 3600 + parts[1] * 60 + parts[2];
+      } else if (parts.length === 2) {
+        return parts[0] * 60 + parts[1];
+      } else if (parts.length === 1) {
+        return Number(parts[0]);
+      }
+      return 0;
+    }
+
+    function extractVideoId(url) {
+      const regex = /(?:youtube\.com\/.*v=|youtu\.be\/)([^&?/]+)/;
+      const match = url.match(regex);
+      return match ? match[1] : null;
+    }
+
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        height: '390',
+        width: '640',
+        videoId: '',
+        playerVars: {
+          autoplay: 0,
+          controls: 1
+        },
+        events: {
+          onReady: onPlayerReady,
+          onStateChange: onPlayerStateChange
+        }
+      });
+    }
+
+    function onPlayerReady(event) {
+      // لا شيء هنا
+    }
+
+    function onPlayerStateChange(event) {
+      if (event.data === YT.PlayerState.PLAYING && stopTime > 0) {
+        checkTime();
+      }
+    }
+
+    function checkTime() {
+      const currentTime = player.getCurrentTime();
+      if (currentTime >= stopTime) {
+        player.pauseVideo();
+      } else {
+        setTimeout(checkTime, 500);
+      }
+    }
+
+    function loadYouTubeVideo() {
+      const url = document.getElementById("youtubeUrl").value;
+      const start = timeToSeconds(document.getElementById("startTime").value);
+      const end = timeToSeconds(document.getElementById("endTime").value);
+      const videoId = extractVideoId(url);
+
+      if (!videoId || isNaN(start) || isNaN(end) || start >= end) {
+        alert("يرجى إدخال رابط يوتيوب صحيح ووقت بداية ونهاية بصيغة صحيحة");
+        return;
+      }
+
+      stopTime = end;
+
+      player.loadVideoById({
+        videoId: videoId,
+        startSeconds: start,
+        endSeconds: end
+      });
+    }
+  </script>
+
+</body>
+</html>
