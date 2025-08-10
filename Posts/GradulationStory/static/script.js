@@ -1,4 +1,6 @@
 const pageFiles = [    // This would be the last content page in reading order.
+    './pages/index-page.html',       // This is your 'Fahras' (table of contents) page.
+    './pages/introduction.html',
 ];
 async function loadPages() {
     const flipbookElement = document.getElementById("flipbook");
@@ -61,3 +63,45 @@ function goToPage(index) {
 }
 
 document.addEventListener('DOMContentLoaded', loadPages);
+
+function removeHighlights() {
+    const pages = document.querySelectorAll('#flipbook .page');
+    pages.forEach(page => {
+        page.innerHTML = page.innerHTML.replace(/<span class="highlight">(.*?)<\/span>/g, '$1');
+    });
+}
+
+function highlightTextAndGoToPage(text) {
+    if (!text) return;
+    const pages = document.querySelectorAll('#flipbook .page');
+    let foundPageIndex = -1; // لتخزين رقم الصفحة التي تحتوي الكلمة أول مرة
+    
+    pages.forEach((page, index) => {
+        // التعبير العادي للبحث
+        const regex = new RegExp(text, 'gi');
+        
+        // هل الصفحة تحتوي الكلمة؟
+        if (regex.test(page.textContent) && foundPageIndex === -1) {
+            foundPageIndex = index;
+        }
+        
+        // استبدال النصوص لتظليل الكلمة
+        page.innerHTML = page.innerHTML.replace(regex, match => `<span class="highlight">${match}</span>`);
+    });
+
+    if (foundPageIndex !== -1 && window.flipbook) {
+        // الانتقال إلى الصفحة التي وجدت فيها الكلمة (index يبدأ من 0)
+        // حسب طريقة الترقيم في PageFlip (عادة تبدأ من 1)
+        window.flipbook.flip(foundPageIndex + 1);
+    }
+}
+
+document.getElementById('searchBtn').addEventListener('click', () => {
+    const query = document.getElementById('searchInput').value.trim();
+    removeHighlights();  // إزالة التظليل القديم
+    if (query !== '') {
+        highlightTextAndGoToPage(query);
+    }
+});
+
+
