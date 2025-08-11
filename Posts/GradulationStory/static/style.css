@@ -97,7 +97,14 @@ h1 {
     overflow: hidden;
     animation: glow 3s infinite alternate;
 }
-
+.page-number {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    font-size: 14px;
+    color: #555;
+    user-select: none;
+}
 .page {
     background: var(--bg-page);
     padding: 20px;
@@ -110,6 +117,7 @@ h1 {
     overflow-y: auto;
     background-color: var(--bg-page);
     transition: background-color 0.3s ease-in-out;
+    position: relative;
 }
 
 .page:nth-child(even):not(.hard) {
@@ -118,6 +126,14 @@ h1 {
 
 .page:nth-child(odd):not(.hard) {
     background-color: var(--soft-green);
+}
+#searchCount {
+  font-size: 1rem;
+  padding: 0 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #f0f0f0;
+  user-select: none;
 }
 
 .navigation {
