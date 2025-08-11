@@ -1,6 +1,9 @@
 const pageFiles = [    // This would be the last content page in reading order.
     './pages/index-page.html',       // This is your 'Fahras' (table of contents) page.
     './pages/introduction.html',
+    './pages/chapter1.html',
+    './pages/chapter2.html',
+    './pages/chapter3.html',
 ];
 async function loadPages() {
     const flipbookElement = document.getElementById("flipbook");
@@ -103,5 +106,6 @@ document.getElementById('searchBtn').addEventListener('click', () => {
         highlightTextAndGoToPage(query);
     }
 });
+
 
 
